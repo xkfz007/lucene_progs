@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "- //W3C//DTD HTML 4.01 Transitional //EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head> 
+  
+<meta content="text/html; charset=utf-8" http-equiv="content-type"><title>Manual do DocFetcher - Sintaxe da consulta</title> 
+ 
+
+<meta content="Tran Nam Quang" name="author"> 
+<link rel="stylesheet" href="style.css" type="text/css"></head><body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#User_Interface_Reference"> Voltar à página principal <br> </a> </div> 
+<div id="main"> 
+<h1 id="title">  Sintaxe </h1> <p> 
+A pesquisa usa o <a href="http://lucene.apache.org/"> Apache Lucene </a>, e é explicado em detalhe <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html"> no site do Lucene </a>. 
+O que segue é apenas um breve resumo da sintaxe na pesquisa disponível.</p><ul> 
+<li> Operadores booleanos: O operador padrão é <code> OR </code> (OU), ou seja, se você digitar <code> cão gato </code>,
+DocFetcher irá procurar documentos que contêm uma ou ambas as palavras.
+Para pesquisar documentos que contenham as duas palavras, digite <code> cão 
+AND gato </code>. Para excluir uma palavra, utilize o operador <code> NOT </code> (Não) ou "-" (caracter menos) na frente dela. </li> 
+<li> Termos: Para indicar que o documento a ser pesquisado deve conter um termo específico, utilize o operador '+' , por exemplo: <span style="font-family: monospace;"> + cão gato </span>. <br> 
+</li> 
+<li> Pesquisa por Frase: Para pesquisar <code> cão gato </code> em uma ordem específica, digite <code> "cão gato "</code> (com as aspas). </li> 
+<li> Pesquisa em campos específicos: Atualmente, apenas os campos
+"conteúdo", "título" e "autor" estão disponíveis. O campo "conteúdo" é
+o campo de pesquisa padrão, mas, se você quiser, por exemplo, achar um
+documento cujo título contém <code> cão <!-- code-->, digite o seguinte: <code> title: cão </code>. 
+Para um documento com "cão" e/ou "gato" no título, digite: <code> title: "cão gato "</code>. </code></li> 
+<li> Wildcards: Um ponto de interrogação em uma string de pesquisa
+('?') representa um caracter desconhecido, um asterisco ('*') para um
+número desconhecido de caracteres. Por Exemplo: <code> Luc* </code> 
+podem buscar por <code> Luc </code>, <code> Lucy </code>, <code> Lucene </code>, etc, enquanto <code> Luc? </code> só  busca por <code> Lucy </code>. Strings de Busca não devem começar com ? ou *. <br> </li> 
+<li> Termos com peso: Você pode atribuir pesos à palavras, aumentando
+ou diminuindo o nível de alinhamento para um determinado documento, se
+a palavra ponderada ocorre nele. Esta opção permite-lhe influenciar a
+relevância do resultado e a ordem que aparece na página. Exemplo: <code> cão^ 4 gato </code> fará com que os documentos com "cão", apareçam no topo da página de resultados. <br> 
+</li> 
+</ul> 
+</div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#User_Interface_Reference"> Voltar à página principal </a> </div> 
+</body></html>

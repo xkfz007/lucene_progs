@@ -1,0 +1,48 @@
+﻿<! DOCTYPE html PUBLIC "- / / W3C / / DTD HTML 4.01 Transitional / / EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> <head> 
+<meta content="text/html; charset=utf-8" http-equiv="content-type"> <title> DocFetcher Manual - bugs conhecidos e limitações </ title> 
+
+<meta content="Tran Nam Quang" name="author"> 
+<link rel="stylesheet" href="style.css" type="text/css"> </head> 
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal <br> 
+</a> </div> 
+<div id="main"> 
+<h1 id="title"> Bugs e limitações conhecidos </h1> <h2> No Windows </h2> 
+<ul> <li> DocFetcher pode falhar após a remoção dois ou mais índices de uma vez ou depois de encerrar o programa se a opção "Monitor de Pastas Indexadas" estiver ligado. Ela também pode falhar se essa opção está desligada através da Janela de Preferências. A causa é um erro em uma das bibliotecas utilizadas (JNotify). Atualmente, não há nenhuma outra opção outra conhecida a não ser a de desativar o o monitor de pastas. </li> </ul> 
+
+<h2> No Linux </h2> <ul> 
+<li> Recomenda-se usar o Java Runtime da Sun em vez de outras implementações de Java parcialmente incompletas, tanto por razões de compatibilidade quanto de  desempenho. </li> 
+
+<li> A Copia de arquivos a partir do painel resultado pode não funcionar. Solução: Abra o arquivo da pasta pai (através do menu de contexto do resultado painel) e copie os arquivos a partir de lá. </li> 
+<li> A tentativa de índexar pastas com links simbólicos pode enviar o programa para um ciclo infinito se monitor de pastas estiver ativado. Novamente, esta é um bug no JNotify e a única coisa que você pode fazer sobre isso é  desativar o monitor. </li> 
+
+<li> O  mover arquivos de pastas monitorados não causa uma atualização do índice. Você tem que atualizar os índices afetados manualmente. É importante notar que a atualização automática de índices no caso de deleções de arquivo funciona. </li> 
+</ul> 
+
+<h2> Interface com o Usuário </h2> 
+<ul> 
+<li> O destaque no painel de visualização não está totalmente implementado ainda. Mais importante ainda, se você realizar uma pesquisa "AND", como o "cão gato" (incluindo as aspas) daí tanto "cão" quanto "gato" serão destacados no painel de visualização. </td> 
+</ul> 
+
+<h2>Relacionados com a  Indexação <br> </h2> 
+<ul> 
+<li> Para descobrir o que realmente é extraído de um determinado documento, você pode usar o built-in "Parser Testbox" usando o F11. </li> 
+<li> Você pode receber uma mensagem de erro: "Memória Insuficiente na Máquina Virtual Java" se o arquivo a ser indexado é muito grande. Leia <a href="Indexing_Huge_Documents.html"> mais aqui </a>. </li> <li> Todos os documentos protegidos por senha são omitidos durante processo de parsing. </li> 
+<li> Às vezes, um arquivo PDF será omitido, mesmo que você possa ver o seu conteúdo em um visualizador de PDF normal, sem ter que digitar uma senha. O motivo mais 
+provável é que este arquivo permite que você visualize o seu conteúdo, <span style="font-style: italic;"> mas </span> é protegido pode senha contra a cópia de partes e/ou modificar a seu conteúdo. 
+Uma das coisas que o DocFetcher faz com seus documentos é extrair o texto deles. Isto pode ser interpretado como uma espécie de "cópia", razão pela qual você pode ler o arquivo PDF, mas DocFetcher 
+não pode. </li> 
+<li> Algumas partes dos arquivos do Microsoft Word não são extraídos e portanto, não fazem parte da pesquisa, tais como texto dentro de fórmulas e gráficos. </li> 
+<li> DocFetcher não pode acessar arquivos CHM que estão sendo visualizados pelo visualizador padrão do Windows para CHM. Portanto, você deve fechar todos os arquivos CHM que pretende indexar. </li> 
+<li> Alguns arquivos não serão indexados, mesmo que pareçam ser totalmente válidos documentos. Este é o caso com alguns arquivos PowerPoint e PDF, que parece conter texto, mas, na verdade, consistem de  apenas imagens escaneadas. 
+Você pode usar o analisador textbox mencionado acima para identificar esses arquivos. </li> 
+<li> A extração de texto SVG não funciona se o texto é armazenado como caminhos (em vez de texto). </li> 
+<li> Uma palavra que abrange duas ou mais linhas (ou seja, é divididas por quebras de linha) não é pesquisável. </li> 
+</ul> 
+<br> 
+<ul> 
+</ul> 
+</div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+</body> </html>

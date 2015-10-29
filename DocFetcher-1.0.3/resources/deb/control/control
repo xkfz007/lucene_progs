@@ -1,0 +1,12 @@
+Package: docfetcher
+Version: @VERSION@
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Tran Nam Quang <qforce@users.sourceforge.net>
+Depends: sun-java5-jre | sun-java6-jre | java2-runtime | openjdk-6-jre
+Homepage: http://docfetcher.sourceforge.net
+Description: Search the contents of documents on your computer.
+ DocFetcher is a desktop search application: It allows you to search the contents of documents on your computer. - You can think of it as Google for your local document repository.
+ .
+ The program runs on GNOME, Xfce and KDE. It is recommended to use the Java Runtime Environments from Sun instead of alternative implementations, both for compatibility and performance reasons.

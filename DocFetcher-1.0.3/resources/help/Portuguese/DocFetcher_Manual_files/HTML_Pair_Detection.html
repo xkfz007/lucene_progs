@@ -1,0 +1,61 @@
+﻿<! DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> <head> 
+<meta content="text/html;  charset=utf-8" http-equiv="content-type"> <title> DocFetcher Manual - Como funciona a detecção de pares de HTML </title> 
+
+<meta content="Tran Nam Quang" name="author"> 
+<link rel="stylesheet" href="style.css" type="text/css"> </head> 
+
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+<div id="main"> <h1 id="title"> Como a detecção de pares funciona</h1> 
+
+DocFetcher tenta detectar se um determinado documento HTML tem uma pasta associada e, em caso afirmativo, trata-los como um único documento. A principal razão 
+para a inclusão deste recurso para esconder arquivos dentro de pastas HTML, que, muitas vezes, poluem a listagem de resultados. 
+
+O mecanismo detecção utilizado imita o mecanismo encontrado no Microsoft Windows 2000/ME/XP, que é explicado <a href="http://support.microsoft.com/kb/252721/en-us"> aqui </a>. 
+Aqui está um breve resumo: Para cada pasta que tem um dos seguintes sufixos: <br> 
+<ul>
+<li>_archivos</li>
+<li>_arquivos</li>
+<li>_bestanden</li>
+<li>_bylos</li>
+<li>-Dateien</li>
+<li>_datoteke</li>
+<li>_dosyalar</li>
+<li>_elemei</li>
+<li>_failid</li>
+<li>_fails</li>
+<li>_fajlovi</li>
+<li>_ficheiros</li>
+<li>_fichiers</li>
+<li>-filer</li>
+<li>.files</li>
+<li>_files</li>
+<li>_file</li>
+<li>_fitxers</li>
+<li>_fitxategiak</li>
+<li>_pliki</li>
+<li>_soubory</li>
+<li>_tiedostot</li>
+</ul>
+DocFetcher verifica se há um arquivo HTML com uma correspondente "nome de arquivo" associado. Se assim for, a pasta e o arquivo será tratado como um único documento. Por 
+exemplo, se há uma pasta chamada "foo_files", o DocFetcher verifica se há um arquivo correspondente com o nome "foo.html", "foo.htm", "foo.shtml", "foo.shtm", e assim por diante. Na maioria das vezes, o emparelhamento pode ser ambíguo, mas como você já pode ver, existem algumas raras ocasiões em que este mecanismo não funciona: <br> 
+<ul> 
+<li> E se o DocFetcher encontra esses arquivos: "foo.htm", "foo.html" e "foo_files"? Ele irá associar a pasta com um dos dois arquivos HTML, mas qual é o escolhido é indefinido. </li> 
+<li> E os arquivos "foo.htm", "foo_files" e "foo-Dateien"? Aqui, uma das duas pastas será associada com o arquivo HTML, mas a escolha é indefinido também. </li> 
+
+Ou <li> imagine a seguinte situação: "foo.htm", "foo.html", "foo_files", "foo-Dateien". O arquivo que está ligado à qual pasta? 
+Duas associações serão feitas, mas não há nenhuma garantia de que eles estão corretas. </li> 
+</ul> 
+
+Então, aqui estão algumas dicas sobre como organizar o seu documento no repositório a fim de evitar tais problemas: <br> 
+<ul> 
+<li> Renomeie os seus documentos quando ambiguidade pode acontecer. </li> 
+<li> Não nomeie pastas para que elas se pareçam com pastas HTML. Não dê nomes como "journal_files", "office_files", etc e uma pasta como nome 
+"this_fails" pode realmente levar a aplicação a falhar, tal como indicado pela o nome ( "_fails" é um sufixo de uma pasta HTML, veja acima). </li> 
+
+<li> Algumas páginas com múltiplos documentos (por exemplo, tutoriais) baixados da web não terão uma estrutura que pode trazer problemas para o DocFetcher. Em vez disso, haverá uma página inicial chamada "index.htm" ou algo parecido, o que aponta para as outras páginas. O mecanismo de emparelhamento descrito acima, obviamente, não funciona aqui (não há associações feitas), e, muitas vezes, é uma idéia melhor para indexar estas páginas ou, pelo menos, indexá-los em um índice separado. </li> 
+</ul> 
+</div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+</body> </html>

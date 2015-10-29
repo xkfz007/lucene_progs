@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual</title>
+
+<meta content="Tran Nam Quang" name="author">
+<meta name="generator" content="Bluefish 1.0.7">
+<meta name="author" content="Tran Nam Quang">
+<meta name="CREATED" content="20071010;12210300">
+<meta name="CHANGEDBY" content="Tran Quang">
+<meta name="CHANGED" content="20071010;21544900">
+<link rel="stylesheet" href="DocFetcher_Manual_files/style.css" type="text/css"></head><body>
+<div id="main">
+<div style="float: right; color: gray;">DocFetcher
+1.0.3<br>
+</div>
+<h1>Introduction</h1>
+<p>DocFetcher is an Open Source desktop
+search application: It
+allows you to search the contents of documents on your computer. - You can
+think of it as Google for your local document repository.</p>
+<p><small>(Hint:
+If you're reading this document inside DocFetcher and prefer to read it
+in your web browser instead, click on the "Open in external
+browser" button right above this panel.)</small></p>
+<p><span class="p-label">Create an index</span>:
+Right-click on the "Search
+Scope" panel on the left and select "Create Index..." Now
+choose a folder to be indexed. For starters, this should be a small one with not too
+many files in it, like, say, 50? After selecting the folder,
+a configuration window pops up. The default&nbsp;configuration
+should
+suffice, so just click on the "Run" button and wait until DocFetcher
+has finished indexing the documents.</p><p>Alternatively, you could drag a folder
+out of your file manager and drop it on the "Search
+Scope" panel. Another
+way of creating indexes is rightclicking on a folder in your file
+manager. This is described below, under the section "Notable Features".</p>
+<p><span class="p-label">Perform a search</span>:
+Enter a search term in
+the&nbsp;text box above the result panel (the table with the column
+headers) and hit Enter. The search results will be displayed in the
+result panel and split up into pages if the number of results exceeds a
+certain limit.
+You can navigate through the pages using the arrow buttons to the right
+of the text box you've entered the search term in.</p>
+<p><span class="p-label">Filter or sort the results</span>:
+You may enter
+some values into
+the
+"Minimum / Maximum Filesize" box to filter out files with a file size
+below the minimum and/or above the maximum value. You can also
+check or uncheck items in the "Filetypes" and "Search
+Scope" panel to filter out certain file types or files in
+specific folders. Click on the column headers of the result panel to
+sort the results by the chosen criterion.</p>
+<p><span class="p-label">The preview panel</span>:
+Below
+(or to the right of) the result panel you can find the preview panel,
+which provides a text-only preview with search term highlighting,
+and, for HTML documents, a simple built-in web browser in addition to
+that. (<a href="DocFetcher_Manual_files/XULRunner.html">You
+might have to install it first.</a>)</p>
+<p><small>(If
+you are reading this inside DocFetcher, following the instructions in
+the next paragraph will make this manual disappear. You
+can either open it in an external browser with the "Open in external
+browser" button or restore it later with the '?' button.)</small></p>
+<p><span class="p-label">Open a document</span>:
+Double-click on one
+of the items on
+the result panel if you think you've found what you've been looking
+for. By default, DocFetcher will automatically hide in the System Tray
+after opening a file. DocFetcher will also hide in the System Tray
+if you click on the "Minimize to system tray" button. To bring it
+back, either click on the System Tray icon or press the "global hotkey"
+(Ctrl + F8 by default).</p>
+<p><span class="p-label">Index updates</span>: If documents in the
+document repository are added, removed or modified, the corresponding
+indexes have to be updated. This is done automatically in two ways: (1)
+If DocFetcher is running, it detects the changes and updates the
+indexes immediately. (2) If DocFetcher isn't running, the changes are
+detected by a small daemon program that runs in the background; then
+the affected indexes are updated the next time DocFetcher starts.<br><span style="text-decoration: underline;">
+Note</span>: If you are
+using the portable version of DocFetcher and want the
+daemon to be run automatically on startup, you have to manually add the
+daemon executable(s) to your operating system's list of startup programs.<br>
+</p>
+<p><span style="font-weight: bold;">Don't index entire drives</span>:
+In contrast to other desktop search applications (e.g. Google Desktop),
+DocFetcher was not designed for&nbsp;indexing entire harddrives (e.g.
+"C:\"), and may explode if you attempt to do so. DocFetcher expects
+that you index only what you actually need, which saves both time and
+diskspace, and also gives much better search results.</p>
+<h1>Notable Features<br>
+</h1>
+<p><span class="p-label">Portable document repository</span>:
+The portable version of DocFetcher
+allows you to bundle up DocFetcher, your documents and their associated
+indexes into a single folder, which you can then&nbsp;move around
+freely, e.g. to removable media,&nbsp;encrypted volumes or other
+computers. This can
+also be used for sharing a single document repository across a local
+area network or across the OS'es of a Windows/Linux dual boot system. <a href="DocFetcher_Manual_files/Portable_Repositories.html">Details.</a></p>
+<p><span class="p-label">Launch DocFetcher on a
+folder by rightclicking on it</span>:
+Sometimes it would be quite
+convenient to perform a full-text search on a folder just by
+rightclicking on it in the file manager, without creating any index
+files. DocFetcher offers a feature (you might call it "temporary
+indexes") that comes very close to that. Note that this requires manual
+installation if you're using the Linux and/or portable version of
+DocFetcher. See <a href="DocFetcher_Manual_files/Shell_Integration.html">here</a> for more.</p>
+<p><span class="p-label">Detection of
+HTML pairs</span>:
+Pairs of HTML files and associated folders (e.g.&nbsp;"foo.htm"
+and "foo_files") can be treated as a single document. See <a href="DocFetcher_Manual_files/HTML_Pair_Detection.html">here</a>
+for a
+description of how this works, the rare situations where it might not
+work, and&nbsp;how to avoid these situations.</p><span class="p-label">Customizable
+text&nbsp;file
+extensions</span>: You can specify which files should be indexed
+as
+plain text. This feature may be useful for programmers who want to
+index
+source code files.&nbsp;HTML file extensions can be customized also.<br>
+
+<p><span class="p-label">Indexing multiple
+folders at once</span>:
+There is an "Add folder to queue"
+button on the top right of the indexing configuration window that
+allows putting several folders in a queue, in which they will be
+processed one after another.</p>
+<p><span class="p-label">Excluding
+certain files from indexing</span>: You can exclude certain files
+from indexing by entering one or more regular expression based filename
+patterns. <a href="DocFetcher_Manual_files/Skip_Files_Regex.html">Details</a>.</p>
+<h1><a name="User_Interface_Reference"></a>User
+Interface Reference</h1>
+<ul>
+<li><a href="DocFetcher_Manual_files/Query_Syntax.html">Query
+syntax</a></li>
+<li><a href="DocFetcher_Manual_files/Keyboard_Shortcuts.html">Keyboard
+shortcuts</a></li>
+<li><a href="DocFetcher_Manual_files/Indexing_Options.html">Indexing
+options</a></li>
+<ul class="level2">
+<li><a href="DocFetcher_Manual_files/Skip_Files_Regex.html">Skipping
+files using regular expressions</a></li>
+<li><a href="DocFetcher_Manual_files/HTML_Pair_Detection.html">How
+the HTML pair detection works</a></li>
+</ul>
+<li><a href="DocFetcher_Manual_files/Preferences.html">Preferences<br>
+</a></li>
+</ul>
+<h1><a name="Additional_Information"></a>Additional
+Information<br>
+</h1>
+<ul>
+<li><a href="DocFetcher_Manual_files/XULRunner.html">Enabling
+the embedded web browser / Replacing Internet Explorer as the embedded
+web browser</a></li>
+<li><a href="DocFetcher_Manual_files/Portable_Repositories.html">Portable
+document repositories</a></li><li><a href="DocFetcher_Manual_files/Shell_Integration.html">Launch DocFetcher on a
+folder by rightclicking on it</a></li><li><a href="DocFetcher_Manual_files/About_The_Project.html">About
+the project</a></li>
+</ul>For more information, visit the <a href="http://sourceforge.net/apps/mediawiki/docfetcher/index.php?title=Main_Page">project wiki</a>, where you can also submit bug reports and feature requests.<br>
+
+</div>
+<div class="footer"><span style="color: rgb(128, 128, 128);">DocFetcher
+Manual - Copyright (c) 2007-2010 Tran Nam Quang</span>
+</div>
+</body></html>

@@ -1,0 +1,6 @@
+This file lists significant changes in the manual from one release to the next, so that translators can easily figure out where to update their translations. Typo corrections are not listed here.
+
+=========================
+	After 1.0
+=========================
+- Portable_Repositories.html, section "Usability tips": "Java Runtime Environment, version 1.6.0" instead of "... 1.5.0"

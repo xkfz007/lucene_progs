@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="DocFetcher-0.9.5/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.swt.nl1_3.2.0.v200606220026.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.swt.nl2_3.2.0.v200606220026.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.swt.nl2a_3.2.0.v200606220026.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.swt.nlBidi_3.2.0.v200606220026.jar"/>
+	<classpathentry kind="lib" path="lib/odf-utils-20051129.jar"/>
+	<classpathentry kind="lib" path="lib/chm4j.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="DocFetcher/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/JXGrabKey.jar"/>
+	<classpathentry kind="lib" path="lib/wpd-0.9.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="DocFetcher/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/jRegistryKey.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.2.jar" sourcepath="/media/Data/Dev/Software/Java Libraries/commons-cli-1.2-src.zip"/>
+	<classpathentry kind="lib" path="lib/swt-3.5.1-gtk-linux-x86.jar" sourcepath="/media/Data/eclipse-3.5.1-linux/plugins/org.eclipse.swt.gtk.linux.x86.source_3.5.1.v3555a.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="lib/poi-contrib-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.6-20091214.jar" sourcepath="/media/Data/Dev/Software/Java Libraries/poi-src-3.6-20091214.zip"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/geronimo-stax-api_1.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.core.commands_3.5.0.I20090525-2000.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.equinox.common_3.5.1.R35x_v20090807-1100.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.equinox.weaving.hook_1.0.0.200905261348.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jface_3.5.1.M20090826-0800.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.osgi_3.5.1.R35x_v20090827.jar"/>
+	<classpathentry kind="lib" path="lib/jericho-html-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/jintellitype-1.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/jxl.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.0.0.jar" sourcepath="/media/Data/Dev/Software/Java Libraries/lucene-3.0.0-src.zip"/>
+	<classpathentry kind="lib" path="lib/lucene-highlighter-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-memory-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jnotify-0.92.jar"/>
+	<classpathentry kind="lib" path="lib/bcmail-jdk15-1.44.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15-1.44.jar"/>
+	<classpathentry kind="lib" path="lib/fontbox-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-1.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

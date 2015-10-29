@@ -1,0 +1,36 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> <head> <meta content="text/html; charset=utf-8" http-equiv="content-type"> 
+<title> Manual do DocFetcher - Indexação de Documentos Grandes </title> 
+<meta content = "Tran Quang Nam" name = "autor"> 
+<link rel="stylesheet" href="style.css" type="text/css"> </head> 
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+<div id="main"> 
+
+<h1> Indexação de documentos Grandes </h1> 
+<p> Se o tamanho do arquivo de um documento excede a um certo valor (depende do tipo de arquivo, por exemplo,> 5 MB para Arquivos HTML), o DocFetcher não será capaz de indexá-lo. 
+Em vez disso, você pode receber uma advertência de "Memória Insuficiente", e o DocFetcher vai ignorar o arquivo. 
+Veja o que você pode fazer: </p> 
+<h2> Atualização do índice após reiniciar </h2> 
+
+<p> Após DocFetcher terminar a indexação, encerre o programa e reinicie-o, em seguida, selecione "Update" no menu de contexto do índice que contém o arquivo grande. Existe a possibilidade de que imediatamente após o reínicio há ainda memória suficiente para indexar um arquivo deste tamanho. </p> 
+
+<h2> Aumente a quantidade de memória que o DocFetcher pode utilizar </h2> 
+<p> O DocFetcher  é executado dentro de uma "Java Virtual Machine - Máquina Virtual Java", que tem um limite de quantidade de RAM que pode ser usada - vulgarmente conhecida como a "maximum heap size". Se o documento for muito grande, este limite é atingido, e a indexação falhará. Você pode aumentar o limite, alterando os parâmetros de inicialização do programa. O arquivo a ser modificado depende da versão do DocFetcher que você está executando: <br> </p> 
+<ul> 
+<li> Windows: DocFetcher.bat - na pasta que o programa DocFetcher foi instalado (por exemplo: "C:\Program Files\docfetcher").</li> 
+<li> Linux: DocFetcher.sh - no diretório /usr/share/docfetcher. Você precisará de permissão de escrita neste diretório. </li> 
+<li> Portátil: DocFetcher.bat e DocFetcher.sh - no diretório em que foi extraído DocFetcher. </li> </ul> 
+Todos esses arquivos terminam com uma linha que começa com "java-cp". 
+Insira: "-Xmx256m" entre "java" e "-cp". Isto irá aumentar o tamanho máximo para 256 MB, o que deverá ser suficiente para quase todos os casos. 
+Agora a última linha do arquivo modificado deve ser algo assim: <span style="font-family: monospace;"> <br> </span> 
+<div style="margin-left: 40px;"> <span style = "font-family:monospace; "> java-Xmx256m-cp [rabiscos de programador aqui ...]</span> <br> </div> 
+
+<p> Por fim, basta salvar o arquivo e reiniciar o DocFetcher com ele!</p> 
+
+<h2> ... ou simplesmente ignorar o arquivo </h2> 
+
+Para excluir o arquivo da indexação, você pode movê-lo para fora do repositório ou <a href="Skip_Files_Regex.html"> escrever um "ignorar arquivos" </a>, correspondente àquela pasta. </div> 
+
+<div class="footer"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+</body> </html>

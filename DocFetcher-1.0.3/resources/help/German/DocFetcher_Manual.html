@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch</title>
+
+<meta content="Hermann-Josef Beckers" name="author">
+<meta name="generator" content="Bluefish 1.0.7">
+<meta name="CREATED" content="20071010;12210300">
+<meta name="CHANGED" content="20071010;21544900">
+<link rel="stylesheet" href="DocFetcher_Manual_files/style.css" type="text/css"></head><body>
+<div id="main">
+<div style="float: right; color: gray;">DocFetcher
+1.0.3<br>
+</div>
+<h1>Einführung</h1>
+<p>DocFetcher ist eine Open-Source-Suchanwendung:
+Er ermöglicht Ihnen die Volltextsuche in Dokumenten auf Ihrem Computer. - Eine Art Google für den Heimcomputer.</p>
+<p><small>(Tipp:
+Wenn Sie dieses Dokument innerhalb von DocFetcher lesen, es aber lieber in Ihrem
+Webbrowser anzeigen wollen, klicken Sie auf die Schaltfläche "Seite mit externem Browser 
+öffnen" direkt oberhalb dieses Panels.)</small></p>
+<p><span class="p-label">Indexerstellung</span>:
+Klicken Sie mit rechts auf "Suchbereich" und wählen Sie "Index
+erstellen ..." Dann wählen Sie einen Ordner, für den ein Index erstellt
+werden soll. Zu Beginn sollte dies ein kleiner Ordner mit nicht zu
+vielen Dateien sein, z. B. 50? Nach
+der Auswahl erscheint ein Konfigurationsdialog. Die
+Standardkonfiguration sollte
+in Ordnung sein; klicken Sie daher einfach auf die "Start"-Schaltfläche
+und warten
+dann, bis DocFetcher die Indizierung der Dokumente beendet hat.
+</p><p>Alternativ können Sie einen Ordner aus Ihrem Dateimanager
+ziehen und im Feld "Suchbereich" fallen lassen. Ein weiterer Weg zur
+Indexerstellung ist der Rechtsklick auf einem Ordner in Ihrem
+Dateimanager. Dies ist weiter unter beschrieben, im Abschnitt "Was
+DocFetcher alles kann".</p>
+<p><span class="p-label">Suche durchführen</span>:
+Geben Sie einen Suchbegriff im Textfeld über der Ergebnisanzeige (die Tabelle mit 
+den Spaltenüberschriften) ein und drücken Sie Enter. Die Ergebnisse werden in der
+Ergebnisanzeige angezeigt und in mehrere Seiten aufgeteilt, wenn die Anzahl der
+Ergebnisse eine bestimmte Grenze übersteigt. Sie können mittels der Pfeile
+rechts neben dem Eingabetextfeld durch die Seiten blättern.</p>
+<p><span class="p-label">Filtern/Sortieren der Ergebnisse</span>:
+Sie können Werte in die Felder "Minimale/Maximale Dateigröße" eingeben, um
+Dateien mit einer Größe außerhalb dieser Bereiche auszufiltern. Sie können außerdem
+Einträge in den Bereichen "Dateitypen" und "Suchbereich" (de)aktivieren, um 
+bestimmte Dateitypen oder Dateien in bestimmten Ordnern zu filtern.
+Klicken Sie auf die Spaltenüberschriften der Ergebnisanzeige, um die Ergebnisse
+entsprechend dem gewählten Kriterium zu sortieren.
+</p>
+<p><span class="p-label">Die Vorschauanzeige</span>:
+Unter (oder rechts neben) der Ergebnisanzeige finden Sie die
+Vorschauanzeige,
+welche eine Text-Anzeige mit Hervorhebung des Suchbegriffs bietet, und
+für HTML-Dokumente zusätzlich einen einfachen, eingebauten Web-Browser.
+(<a href="DocFetcher_Manual_files/XULRunner.html">Es kann sein, dass Sie diesen erst installieren müssen.</a>)</p>
+<p><small>(Wenn Sie dies in DocFetcher lesen und den Anweisungen im
+nächsten Absatz
+folgen, verschwindet dieses Handbuch. Sie können es entweder mittels
+der "Seite im externen Browser öffnen"- oder der "?"-Schaltfläche
+zurückholen.
+)</small></p>
+<p><span class="p-label">Ein Dokument öffnen</span>: Doppelklicken Sie
+auf einen der Einträge im Ergebnisfeld, wenn Sie glauben, das
+Gesuchte gefunden zu haben. Standardmäßig wird DocFetcher in die
+Systemleiste minimiert, wenn eine Datei geöffnet wurde. Dies geschieht
+auch, wenn Sie auf die
+"In die Systemleiste minimieren"-Schaltfläche des Programmfensters
+klicken. Zum Wiederherstellen klicken Sie auf das Icon im Systemleiste
+oder drücken Sie die Schnellzugriffstaste (Standardeinstellung: Strg +
+F8).</p>
+
+<p><span class="p-label">Index-Aktualisierungen</span>: Wenn Dokumente
+im Dokumentverzeichnis hinzugefügt, entfernt oder verändert werden,
+müssen die entsprechenden Indizes aktualisiert werden. Dies erfolgt
+automatisch auf zwei Arten: (1) Wenn DocFetcher gerade läuft, erkennt
+er die Änderungen und aktualisiert umgehend die betroffenen Indizes.
+(2) Wenn DocFetcher nicht läuft, werden die
+Änderungen von einem kleinen Hintergrundprogramm erkannt; dann werden
+die betroffenen Indizes aktualisiert, sobald DocFetcher das nächste Mal
+startet.<br><span style="text-decoration: underline;">
+Hinweis</span>:
+Falls Sie die portable Version von DocFetcher benutzen und das
+Hintergrundprogramm automatisch beim Systemstart starten möchten,
+müssen Sie das Hintergrundprogramm (Daemon/Dienst) manuell zur Liste
+der Start-Programme Ihres Betriebssystems hinzufügen.<br>
+</p>
+<p><span style="font-weight: bold;">Indizieren sie keine Partitionen/Laufwerke</span>:
+Im Gegensatz zu anderen Suchanwendungen (z. B. Google Desktop) wurde
+DocFetcher nicht zum Indizieren kompletter Festplatten (z. B. "C:\")
+entwickelt und kann explodieren, wenn Sie dies versuchen. DocFetcher
+erwartet, dass Sie nur das
+indizieren, was Sie wirklich benötigen. Dies spart sowohl Zeit als auch
+Speicherplatz und gibt auch wesentlich bessere Suchergebnisse.</p>
+<h1>Was DocFetcher alles kann<br>
+</h1>
+<p><span class="p-label">Portables Dokumentverzeichnis</span>:
+Die portable Version von DocFetcher erlaubt es Ihnen, DocFetcher, Ihre
+Dokumente und die damit verbundenen Indizes in einem Ordner zu bündeln,
+welchen Sie dann
+ohne Probleme verschieben können, z. B. auf Wechseldatenträger,
+verschlüsselte Laufwerke oder andere Computer. Dies ist auch geeignet
+für die gemeinsame Benutzung eines einzelnen Dokumentverzeichnisses in
+einem lokalen Netzwerk (LAN), oder für einen Computer mit mehreren
+Betriebssystemen (z. B. Dualboot-System Linux/Windows). <a href="DocFetcher_Manual_files/Portable_Repositories.html">Einzelheiten</a>.</p>
+<p><span class="p-label">Starten Sie DocFetcher durch Rechtsklick auf einen Ordner</span>:
+Manchmal kann es ganz angenehm sein, eine Volltextsuche in einem Ordner
+durch Rechtsklick auf diesen Ordner durchzuführen, ohne irgendwelche
+Indexdateien zu erstellen. DocFetcher bietet eine Möglichkeit (man
+könnte es als "Temporär-Index" bezeichnen), die dem sehr nahe kommt.
+Beachten Sie, dass dies eine manuelle Installation erfordert, wenn Sie
+die Linux- und/oder portable Version von DocFetcher verwenden.
+Schauen Sie <a href="DocFetcher_Manual_files/Shell_Integration.html">hier</a> für weitere Einzelheiten.</p>
+<p><span class="p-label">Erkennung von HTML-Paaren</span>:
+Paare von HTML-Dateien und zugehörigen Ordnern (z. B. "foo.htm" und
+"foo_Dateien") können als ein einzelnes Dokument behandelt werden.
+Schauen Sie <a href="DocFetcher_Manual_files/HTML_Pair_Detection.html">hier</a> für eine Beschreibung darüber, wie dies funktioniert, die seltenen Situationen, wo es nicht
+klappt, und wie man diese Situationen vermeidet.</p><span class="p-label">Anpassbare Textdatei-Endungen</span>:
+Sie können angeben, welche Dateien als einfacher Text behandelt werden
+sollen. Dieses Feature kann für Programmierer nützlich sein, die
+Quellcode-Dateien indizieren möchten. HTML-Dateiendungen können
+ebenfalls angepasst werden.<br>
+
+<p><span class="p-label">Mehrere Ordner an einem Stück indizieren</span>:
+Es gibt eine Schaltfläche "Ordner zur Warteschlange hinzufügen" in der
+rechten oberen Ecke der Indizierungs-Konfiguration, die es erlaubt,
+mehrere Ordner in eine
+Warteschlange zu stellen, in der sie nacheinander abgearbeitet werden.
+</p>
+<p><span class="p-label">Bestimmte Dateien von der Indizierung ausschließen</span>: Sie können bestimmte Dateien von der Indizierung ausschließen, indem Sie 
+auf regulären Ausdrücken basierende Dateinamen-Muster eingeben.
+ <a href="DocFetcher_Manual_files/Skip_Files_Regex.html">Einzelheiten</a>.</p>
+<h1><a name="User_Interface_Reference"></a>Referenz zur Benutzeroberfläche
+</h1>
+<ul>
+<li><a href="DocFetcher_Manual_files/Query_Syntax.html">Abfrage-Syntax</a></li>
+<li><a href="DocFetcher_Manual_files/Keyboard_Shortcuts.html">Tastatur-Befehle
+</a></li>
+<li><a href="DocFetcher_Manual_files/Indexing_Options.html">Indizierungs-Optionen
+</a></li>
+<ul class="level2">
+<li><a href="DocFetcher_Manual_files/Skip_Files_Regex.html">Überspringen von Dateien mittels regulärer Ausdrücke
+</a></li>
+<li><a href="DocFetcher_Manual_files/HTML_Pair_Detection.html">Wie die Erkennung von HTML-Paaren arbeitet</a></li>
+</ul>
+<li><a href="DocFetcher_Manual_files/Preferences.html">Einstellungen<br>
+</a></li>
+</ul>
+<h1><a name="Additional_Information"></a>Weitere Informationen
+<br>
+</h1>
+<ul>
+<li><a href="DocFetcher_Manual_files/XULRunner.html">Aktivieren des eingebetteten
+Web-Browsers/Ersetzen des Internet Explorers als eingebetteter Web-Browser
+</a></li>
+<li><a href="DocFetcher_Manual_files/Portable_Repositories.html">Portable
+Dokumentverzeichnisse</a></li><li><a href="DocFetcher_Manual_files/Shell_Integration.html">Starten von DocFetcher mit einem Ordner durch Rechtsklick auf diesen Ordner</a></li><li><a href="DocFetcher_Manual_files/About_The_Project.html">Über dieses Projekt</a></li>
+</ul>Mehr Information finden Sie auf unserem <a href="http://sourceforge.net/apps/mediawiki/docfetcher/index.php?title=Main_Page">Projekt-Wiki</a>, wo Sie auch Fehlerberichte und Vorschläge für neue Features einreichen können.<br>
+
+</div>
+<div class="footer"><span style="color: rgb(128, 128, 128);">DocFetcher
+Manual - Copyright (c) 2009-2010 Hermann J. Beckers</span>
+</div>
+</body></html>

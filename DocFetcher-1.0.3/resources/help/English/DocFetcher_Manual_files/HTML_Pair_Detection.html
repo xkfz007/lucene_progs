@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - How the HTML pair detection works</title>
+
+<meta content="Tran Nam Quang" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page
+</a></div>
+<div id="main">
+<h1 id="title">How the
+HTML pair detection works</h1>
+DocFetcher
+tries to detect whether a certain HTML document has an associated
+folder, and if so, it treats them as a single document. The main reason
+for including this feature was to hide files&nbsp;inside&nbsp;HTML
+folders, which sometimes pollute the result lists.
+The
+detection mechanism used imitates the mechanism found in Microsoft
+Windows 2000/ME/XP, which is explained <a href="http://support.microsoft.com/kb/252721/en-us">here</a>.
+Here's a brief summary: For every folder that has one of the following
+suffixes:<br>
+<ul>
+<li>_archivos</li>
+<li>_arquivos</li>
+<li>_bestanden</li>
+<li>_bylos</li>
+<li>-Dateien</li>
+<li>_datoteke</li>
+<li>_dosyalar</li>
+<li>_elemei</li>
+<li>_failid</li>
+<li>_fails</li>
+<li>_fajlovi</li>
+<li>_ficheiros</li>
+<li>_fichiers</li>
+<li>-filer</li>
+<li>.files</li>
+<li>_files</li>
+<li>_file</li>
+<li>_fitxers</li>
+<li>_fitxategiak</li>
+<li>_pliki</li>
+<li>_soubory</li>
+<li>_tiedostot</li>
+</ul>
+DocFetcher
+checks whether there's an HTML file with a matching filename. If so,
+the folder and the file will be treated as a single document. For
+example, if there's a folder named "foo_files", DocFetcher checks if
+there's a corresponding file with the name "foo.html", "foo.htm",
+"foo.shtml", "foo.shtm", and so on. Most of the time, the pairing will
+be unambiguous, but as you can already see, there are some rare
+occasions where this mechanism doesn't work:<br>
+<ul>
+<li>What if
+DocFetcher encounters these files: "foo.htm", "foo.html" and
+"foo_files"? It will associate the folder with one of the two HTML
+files, but which one it chooses is undefined.</li>
+<li>What about
+"foo.htm", "foo_files" and "foo-Dateien"? Here, one of the two folders
+will be associated with the HTML file, but the choice is undefined as
+well.</li>
+<li>Or imagine this situation: "foo.htm", "foo.html",
+"foo_files", "foo-Dateien". Which file is connected to which folder?
+Two associations will be made, but there's no guarantee whether they're
+correct.</li>
+</ul>
+So here are some tips on how to organize your document repository in
+order to avoid such problems:<br>
+<ul>
+<li>Rename your documents when ambiguity is around the corner.</li>
+<li>Don't
+name folders so that they look like HTML folders. Don't give them
+names
+like "journal_files", "office_files", etc. And a folder name like
+"this_fails" can indeed lead to application failure, as indicated by
+the name ("_fails" is an HTML folder suffix, see above).</li>
+<li>Some multiple page documents (e.g. comprehensive
+tutorials) downloaded from the web won't have that typical pair
+structure. Instead, there'll be a start page named "index.htm" or
+something like that, which points to the other pages. The pairing
+mechanism described above obviously doesn't work here (no associations
+are made), and often it's a better idea not to index these multiple
+page documents at all, or at least index them in a separate index.</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page</a></div>
+</body></html>

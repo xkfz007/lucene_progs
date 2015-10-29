@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> <head> <meta content="text/html; charset=utf-8" http-equiv="content-type"> 
+<title> Manual do DocFetcher - Ignorando arquivos usando expressões regulares </title> 
+<meta content = "Tran Quang Nam" name = "autor"> <link rel="stylesheet" href="style.css" type="text/css"> </head> 
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#User_Interface_Reference"> Voltar à página principal </a> </div> 
+<div id="main"> 
+<h1> Ignorando arquivos usando expressões regulares </h1> 
+<p> O DocFetcher provê uma forma de excluir determinados arquivos de indexação utilizando expressões regulares.  As expressões regulares podem ser inseridas caixa de texto do "Ignorar arquivos" no painel <a href="Indexing_Options.html"> Opções de Indexação</a> . O caracter '$' é usado para separar duas expressões regulares. </p> 
+<p> Não temos como fazer uma discussão em profundidade sobre  expressões regulares (veja mais no Wikipedia por exemplo), mas alguns exemplos práticos pode ser suficiente para que você possa começar a usá-los no DocFetcher: </p> 
+<h2> Excluir todos os arquivos MS Excel: "*\. xls" </h2> O "." representa um caractere desconhecido. O "*" significa "o caractere anterior, zero ou mais vezes ", neste caso," .* " indica uma  série de zero ou mais caracteres desconhecidos. Já  que o "." já está sendo utilizado como um carácter especial, quando queremos corresponder ao ponto em um nome de arquivo, temos de <span style="font-style: italic;"> enganar o programa </span>, colocando um "\" na frente do ponto. As letras A-Z, a-z  e 0-9 são interpretadas como letras mesmo. Esta é a razão pela qual ".*\.xls" significa qualquer comprimento de arquivo que termina com um ponto e a seqüência "xls". <br> 
+<h2> Excluir alguns arquivos texto relacionados com licenças: license\.txt $ License\.txt $ LICENSE\.txt</h2>
+Como mencionado acima, o caracter "$" pode ser usado para combinar duas ou mais expressões regulares. Como resultado, este padrão irá excluir todos os arquivos com o nome "license.txt", "License.txt" e "LICENSE.txt". Novamente, o ponto deve ser precedido por "\" porque é um caractere especial. <br> 
+
+<h2> Combinando uma seqüência de dígitos: journal[0-9]*\.doc </h2> 
+Suponha que você queira excluir um conjunto de documentos do Word que todos começam com "journal" e termina com uma data ou hora, tipo: journal2008.doc. Mas, o que você <span style="font-style: italic;"> não</span> quer é excluir arquivos como "journalism.doc". Uma expressão como "journal.*\.doc" não vai funcionar. A solução é substituir o "." com "[0-9]": Apesar de o "." ser correspondente a qualquer caractere, "[0-9]" corresponde a um dígito. Por conseguinte, "[0-9]*" corresponderá a uma seqüência de dígitos. <br> 
+<h2> Quer mais? </h2> 
+<p> Dê uma olhada nesta <a href="http://java.sun.com/javase/6/docs/api/java/util/regex/Pattern.html"> página de referência </a> ou ler alguns dos miríades de tutoriais sobre expressão regulares na web. </p> 
+<h2> Interação entre emparelhamento e exclusão arquivo HTML </h2> 
+<p> 
+Se o emparelhamento de HTML está ativado e o DocFetcher encontra um par arquivo HTML /pasta, os padrões de exclusão serão aplicados somente para o arquivo HTML, e não para os arquivos dentro da pasta associada HTML. Em outras palavras, o mecanismo de exclusão não funciona em arquivos, mas em documentos como um todo. </p> </div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#User_Interface_Reference"> Voltar à página principal </a> </div> 
+</body> </html>

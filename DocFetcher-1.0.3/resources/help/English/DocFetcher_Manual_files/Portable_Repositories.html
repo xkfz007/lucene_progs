@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - Portable Document Repositories</title><meta content="Tran Nam Quang" name="author"><link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page
+</a></div>
+<div id="main">
+<h1>Portable Document Repositories</h1><h2>What is the portable version of DocFetcher?</h2><ul><li>Can be obtained from the <a href="http://docfetcher.sourceforge.net/download.html">project website</a>.</li><li>No installation: You simply extract the contents of the downloaded archive into a folder.</li><li>Can be run from both Windows and Linux using the respective launchers (.exe/.bat, .sh)</li><li>If
+you put all documents to be indexed into the DocFetcher folder or
+subfolders of that folder (except for the 'indexes' folder), you
+can freely move around your entire document repository complete with DocFetcher and the indexes.<br></li></ul><h2>What it is good for</h2><ul><li>You
+can keep the whole document repository complete with DocFetcher and
+indexes even after reinstalling your operating system and moving the repository to a different place.</li><li>You can easily move your document repository to another computer.</li><li>You can put your document repository on a CD-ROM (archiving?), a USB drive or other removable media.</li><li>You can put it into an encrypted volume (recommended:&nbsp;<a href="http://www.truecrypt.org/">TrueCrypt</a>).</li><li>A
+single document repository can be shared across&nbsp;a local area
+network, even if there's a mix of Linux and Windows computers.</li><li>You can use a single document repository on a Windows/Linux dual boot system.</li></ul><h2>Usability tips</h2><ul><li>Just common sense, but still: If you put DocFetcher on a CD-ROM, you
+won't be able to save changes to the preferences or the indexes, so
+remember to properly configure&nbsp;everything before burning it to the CD-ROM.</li><li>Since
+DocFetcher is a Java program,&nbsp;it can only be run on computers on
+which a Java Runtime Environment, version 1.6.0 or newer, is installed.
+Thus, if you intend to create a CD-ROM archive of your repository, you
+would probably want to include a Java Runtime Environment installer (or
+two if you're working with both Windows and Linux).</li><li>Juggling with multiple instances of DocFetcher can be made less confusing by setting alternative program window titles
+for some of these instances. Just open the "user.properties" file with
+a text editor and enter an alternative title on the "AppName=" line.</li></ul><h2>Limitations</h2><ul><li>You
+can run multiple instances of the same DocFetcher installation at the
+same time. However, in the current version of DocFetcher the instance
+that terminates last will override all changes made by instances that
+terminated earlier. Therefore, if you want to make some changes
+(to the preferences or indexes)
+from an instance A, either make sure A is the last one that terminates,
+or make sure A is the only instance with write permission.</li><li>As
+mentioned above, the document repository will NOT be fully portable if
+some of its documents are somewhere outside the DocFetcher
+folder.&nbsp;The reason is that DocFetcher can&nbsp;use relative file
+paths instead of absolute ones only if the documents are all located in its
+own folder.</li><li>Documents
+inside the 'indexes' folder will not be indexed. (In fact, you
+shouldn't put anything into that folder, because it might be
+deleted!)</li><li>Beware
+of filename incompatibilities between Linux and Windows. For example,
+on Linux filenames can contain characters such as ":" or "|", but on
+Windows they can't. As a result, you can only move a document
+repository from Linux to Windows or in the opposite direction if it
+doesn't contain documents with incompatible filenames. Oh, and special
+characters such as German umlauts are an entirely different matter...</li></ul></div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page</a></div>
+</body></html>

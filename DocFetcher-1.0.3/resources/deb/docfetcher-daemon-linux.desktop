@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=DocFetcher-Daemon
+Type=Application
+Exec=/usr/share/docfetcher/docfetcher-daemon-linux
+Icon=system-run
+Comment=Detects changes in folders indexed by DocFetcher
+Name[en_US]=DocFetcher-Daemon

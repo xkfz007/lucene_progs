@@ -1,0 +1,58 @@
+﻿<! DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> <head> 
+<meta content="text/html; charset=utf-8" http-equiv="content-type"> 
+<title> Manual do DocFetcher - Opções de Indexação  </title> 
+
+<meta content="Tran Nam Quang" name="author"> 
+<link rel="stylesheet" href="style.css" type="text/css"> </head>
+ 
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+<div id="main"> <h1> Opções </h1> 
+<div style="max-width: 200px; float: left;"> <img style="width: 200px; height: 215px;" alt="" src="Index_Management.png"> <br> 
+</div> 
+<div style="margin-left: 200px; font-size: small; min-height: 215px;"> 
+<ol> 
+<li> <span class="p-label"> Tab bar </span>: 
+Representa uma fila de pastas a serem indexadas. </li> 
+<li> <span class="p-label"> Adicionar/Remover </span>: 
+Você pode usar o botão "Adicionar pasta à fila" para adicionar itens à fila e os botões de fechar para remover itens da fila. 
+Cada item da fila pode ser configurado separadamente utilizando os comandos abaixo da barra. </li> 
+
+<li> <span class="p-label"> Fechar esta janela </span>: 
+Ao clicar neste botão irá fechar esta janela e abortar o processo de indexação, se houver um. </li> 
+
+<li> <span class="p-label"> Pasta Alvo </span>: 
+O caminho da pasta exibida atualmente. </li> 
+<li> <span class="p-label"> Extensões de Texto </span>: 
+As extensões dos arquivos que devem ser indexados como texto simples, separados por espaço. Os valores típicos são: c, cpp, log, java, py. No caso de conflitos com extensões de arquivos existentes e as definidas pelo usuário, será dada maior prioridade às definidas pelo usuário. Para obter uma lista de extensões de arquivo , clique no botão "..." . </li> 
+<li> <span class="p-label"> extensões HTML </span>: 
+As extensões dos arquivos que devem ser indexados como documentos HTML. Esta definição tem prioridade mais elevada do que as definidas pelo usuário. Para obter uma lista de extensões do arquivo relacionada a pasta atual, clique no botão "..." . </li> 
+<li> <span class="p-label"> Ignorar arquivos </span>: 
+Uma concatenação de expressões regulares. Qualquer arquivo com um nome que corresponda a um destes  
+padrões será excluído da indexação. Para descobrir se o seu padrão corresponde a um arquivo específico, use a ferramenta descrita no ponto (12). Para mais 
+informações sobre expressões regulares, consulte <a href="Skip_Files_Regex.html"> aqui </a>. </li>
+ 
+<li> <span class="p-label"> Emparelhamento de HTML </span>: 
+Serve para para combinar arquivos HTML e as suas pastas associadas, tais como "foo.html" e uma pasta no mesmo diretório chamado "foo_files". Para mais informações, consulte <a href="HTML_Pair_Detection.html"> aqui </a>. </li> 
+
+<li> <span class="p-label"> Apagar índice ao Sair </span>: 
+Exclua os arquivos de índice para essa pasta depois que o programa for finalizado. 
+Ativando esta opção permite que você crie "índices temporários", um conceito relacionado à <a href="Shell_Integration.html"> integração de sistemas </a>. </li> 
+
+<li> <span class="p-label"> Ajuda </span>: 
+Abrir este documento em um navegador da web. </li> 
+<li> <span class="p-label"> Restaurar Padrões </span>: 
+Restaurar as opções padrões de indexação. </li> 
+
+<li> <span class="p-label"> Executar </span>: 
+Este botão diz ao DocFetcher que você terminou a  configuração deste item da fila e que está pronto para o processamento. 
+Note que este botão só define a 'execução' para este  item, e não para outros itens na fila. </li> 
+
+<li> <span class="p-label"> Verificação de Expressão regular </span>: 
+Esta pequena ferramenta verifica se o padrão determinado no campo de texto "Ignorar arquivos" coincide com o arquivo especificado aqui. </li> 
+</ol> 
+</div> 
+</div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+</body> </html>

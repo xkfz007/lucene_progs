@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ln -s /usr/share/docfetcher/DocFetcher.sh /usr/bin/docfetcher
+
+chmod a+x /usr/share/docfetcher/DocFetcher.sh
+chmod a+x /usr/share/docfetcher/docfetcher-daemon-linux
+
+if [ -d /usr/share/app-install/desktop ]; then
+	cp /usr/share/applications/docfetcher.desktop /usr/share/app-install/desktop
+fi

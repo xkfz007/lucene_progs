@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - Starten Sie DocFechter durch Rechtsklick auf einen Ordner</title>
+
+<meta content="Hermann-Josef Beckers" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite
+</a></div>
+<div id="main">
+<h1><span class="p-label">Starten Sie DocFechter durch Rechtsklick auf einen Ordner</span></h1>
+<h2>Wie es funktioniert:</h2>
+<ul>
+<li>Anstelle einer indexfreien Volltextsuche haben wir "temporäre
+Indexe" implementiert, weil es schwierig war, die erste Lösung mit der
+bestehenden Programmarchitektur zu integrieren.</li>
+<li>Temporäre Indexe werden erstellt durch Rechtsklick auf einen Ordner
+in Ihrem Dateimanager (z. B. Windows Explorer) und Auswahl von
+"Suche mit DocFetcher".</li>
+<li>Dadurch startet DocFetcher und der selektierte Ordner wird
+automatisch für die Indizierung vorbereitet. Alles, was Sie tun müssen,
+ist "Grünes Licht" für die Indizierung zu geben, indem Sie auf die
+"Start"-Schaltfläche klicken. Natürlich können Sie vorher noch die
+Indizierungs-Optionen ändern.</li>
+<li>Warten Sie, bis die Indizierung beendet ist.</li>
+<li>Auf diese Weise erstellte Indexe haben eine "Bei Ende
+löschen"-Markierung und sind im Suchbereich mit einem [X]
+gekennzeichnet. Diese Markierung zeigt an, das dieser Index nach
+Programmende entfernt wird.
+</li>
+<li>Wenn Sie Ihre Meinung ändern und einen temporären Index permanent
+machen wolen, rufen Sie durch Rechtsklick auf den Index das Kontextmenu
+auf und wählen den Eintrag "Löschen bei Programmende umschalten".</li>
+</ul>
+<h2>Installation unter Windows</h2>
+Der "Suche mit DocFetcher"-Kontextmenu-Eintrag wird automatischer
+erzeugt, wenn Sie DocFetcher mit dem Windows-Installationsprogramm
+installieren. Dieser Eintrag wird bei Deinstallation auch automatisch
+wieder entfernt. Wenn Sie die portable Version unter Windows nutzen,
+ist eine manuelle Installation erforderlich:<br>
+<ul>
+<li>Um den Kontextmenu-Eintrag zu registrieren, starten Sie DocFetcher
+auf der Befehlszeile mit dem Parameter "--register-contextmenu", z. B.:
+<span style="font-family: monospace;">C:\Programme\DocFetcher\DocFetcher.exe --register-contextmenu</span></li>
+<li>Wenn Sie den DocFetcher-Ordner verschieben, müssen Sie den
+Kontextmenu-Eintrag erneut registrieren. Der vorherige Eintrag wird
+überschrieben.</li>
+<li>Zum Entfernen starten Sie DocFetcher mit
+"--unregister-contextmenu", z. B.: <span style="font-family: monospace;">C:\Programme\DocFetcher\DocFetcher.exe --unregister-contextmenu</span></li>
+<li>Beachten Sie, das die "(un)register"-Operationen sprachabhängig
+sind. Das bedeutet, wenn Sie den Kontextmenu-Eintrag registrieren,
+danach die Sprachumgebung wechseln (z. B. Englisch -&gt; Deutsch), dann
+wird der unregister-Aufruf keine Auswirkung haben. Sie müssen zur
+vorherigen Sprachumgebung zurückschalten, um den Kontextmenu-Eintrag zu
+entfernen.
+(Alternativ können sie einfach den "Suche mit DocFetcher"-Eintrag in
+der Windows-Registry entfernen: HKEY_CLASSES_ROOT -&gt; Directory -&gt;
+shell -&gt; ...)<br>
+</li>
+</ul>
+<h2>Installation unter Linux</h2>
+<p>Wenn Sie DocFetcher mit einer durch Leerzeichen getrennten
+Ordnerliste starten, wird DocFetcher diese Ordner direkt nach dem Start
+in die Indizierungs-Warteschlange stellen und sie mit der Markierung
+"Bei Ende löschen" versehen. DocFetcher kann einige dieser Parameter
+abweisen, wenn sie keinen Sinn machen (z. B. nicht existierende
+Ordner). Wenn ein Pfad Leerzeichen enthält, muss er in
+Anführungszeichen gesetzt werden.</p>
+<p>Um DocFetcher mit Ihrem Dateimanager zu integrieren, müssen Sie
+wissen, wie ein Kontextmenü-Eintrag in Ihrem Dateimanager erstellt
+wird, der DocFetcher mit den gewählten Ordnern als Startparametern
+startet.</p>
+<p>So geht es in Nautilus:</p>
+<ul>
+<li>Installieren Sie das Paket 'nautilus-actions' (z. B. <span style="font-family: monospace;">sudo apt-get install
+nautilus-actions</span>).</li>
+<li>Gehen Sie zu 'Einstellungen &gt; Konfiguration von Nautilus-Aktionen', klicken Sie auf 'Import/Export'.</li>
+<li>Importieren Sie die in DocFetcher enthaltene Schema-Datei.
+Ort der Schema-Datei:</li>
+<ul>
+<li>Linux Debian package: /usr/share/docfetcher</li>
+<li>Linux Portable: im DocFetcher-Ordner</li>
+</ul>
+<li>Wenn Sie die portable Version verwenden, müssen Sie die importierte
+Konfiguration ein Stück weit verändern: Wählen Sie die Konfiguration,
+klicken Sie auf 'Bearbeiten' und passen Sie den Pfad zum Programm
+(DocFetcher.sh) und zur Icon-Datei (icons/docfetcher16.png) an. Das
+müssen Sie jedesmal machen, wenn Sie den DocFetcher-Ordner verschieben.
+</li>
+<li>Zum Entfernen des Kontextmenu-Eintrags löschen Sie ihn einfach in der
+'Nautilus Aktions-Konfiguration'.<br>
+</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite</a></div>
+</body></html>

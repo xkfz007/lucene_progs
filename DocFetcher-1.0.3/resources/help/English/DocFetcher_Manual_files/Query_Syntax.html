@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - Query Syntax</title>
+
+<meta content="Tran Nam Quang" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Back
+to main page<br>
+</a></div>
+<div id="main">
+<h1 id="title">Query
+Syntax</h1><p>
+The query capability is provided by <a href="http://lucene.apache.org/">Apache
+Lucene</a>,
+and it's explained in detail <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">here</a>.
+The following is just a short and incomplete summary of the available
+query syntax.<br>
+</p><ul>
+<li>Boolean operators: The
+default operator is <code>OR</code>,
+i.e. if you enter <code>dog cat</code>,
+DocFetcher will search
+for documents containing one or both words. To search for documents
+which contain both words, enter <code>dog
+AND cat</code>. To exclude a
+word, use
+the operator <code>NOT</code>
+or "-" (minus character) in front of it.</li>
+<li>Required terms: To indicate that the document to search for
+must
+contain a specific term, use the '+' operator, like this: <span style="font-family: monospace;">+dog cat</span>.<br>
+</li>
+<li>Phrase search: To search for <code>dog cat</code>
+in that
+particular order, type in <code>"dog
+cat"</code> (with the
+quotation marks).</li>
+<li>Search in particular fields:
+Currently, the fields "contents", "filename", "title" and "author" are
+available. The "contents" field is the
+default search scope, but, for example, if you want to get to a
+document whose title
+contains <code>dog</code>,
+enter this: <code>title:dog</code>.
+For a
+document with "dog" and/or
+"cat" in its title, enter: <code>title:"dog
+cat"</code>.</li>
+<li>Wildcards: A question mark ('?') in a search
+string stands for one unknown character, an asterisk ('*') is for an
+unknown number of unknown
+characters. Example: <code>Luc*</code>
+may yield <code>Luc</code>, <code>Lucy</code>,
+<code>Lucene</code>,
+etc., whereas <code>Luc?</code>
+will only
+yield <code>Lucy</code>.
+Search
+strings must not start with ? or *.<br>
+</li>
+<li>Boosting terms: You can
+assign custom weights to words, thus increasing or decreasing the level
+of matching for a particular document if the weighted word occurs in
+it. This allows you to influence the relevance sorting of the result
+page. Example: <code>dog^4 cat</code>
+will bring up the documents with
+"dog" in it
+on the top of the result page.<br>
+</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Back
+to main page</a></div>
+</body></html>

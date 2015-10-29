@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - Wie die HTML-Paarungserkennung arbeitet</title>
+
+<meta content="Hermann-Josef Beckers" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite
+</a></div>
+<div id="main">
+<h1 id="title">Wie die HTML-Paarungserkennung arbeitet</h1>
+DocFetcher versucht zu erkennen, ob ein bestimmtes HTML-Dokument einen
+zugehörigen Ordner besitzt und behandelt sie dann als ein einzelnes
+Dokument. Der Hauptgrund für die Aufnahme dieses Features war es,
+Dateien innerhalb von HTML-Ordnern zu verstecken, die sonst die
+Ergebnislisten zumüllen. Der Erkennungsmechanismus imitiert den in
+Microsoft Windows 2000/ME/XP enthaltenen Mechanismus, welcher <a href="http://support.microsoft.com/kb/252721/en-us">hier</a> beschrieben ist.
+Hier ist eine kurze Zusammenfassung: Für jeden Ordner, der eine der folgenden Endungen besitzt:
+<br>
+<ul>
+<li>_archivos</li>
+<li>_arquivos</li>
+<li>_bestanden</li>
+<li>_bylos</li>
+<li>-Dateien</li>
+<li>_datoteke</li>
+<li>_dosyalar</li>
+<li>_elemei</li>
+<li>_failid</li>
+<li>_fails</li>
+<li>_fajlovi</li>
+<li>_ficheiros</li>
+<li>_fichiers</li>
+<li>-filer</li>
+<li>.files</li>
+<li>_files</li>
+<li>_file</li>
+<li>_fitxers</li>
+<li>_fitxategiak</li>
+<li>_pliki</li>
+<li>_soubory</li>
+<li>_tiedostot</li>
+</ul>
+prüft DocFetcher, ob es eine HTML-Datei mit einem passenden Dateinamen
+gibt.
+Falls ja, werden der Ordner und die Datei als ein Dokument behandelt.
+Z. B., wenn es einen Ordner "foo_files" gibt, prüft DocFetcher, ob es
+eine entsprechende Datei "foo.html", "foo.htm", "foo.shtml", "foo.shtm"
+usw. gibt. Meistens wird die Paarung eindeutig sein, aber wie Sie
+bereits gesehen haben, gibt es einige Möglichkeiten, wo dieser
+Mechanismus nicht greift:<br>
+<ul>
+<li>Was ist, wenn DocFetcher auf diese Dateien trifft: "foo.htm",
+"foo.html" und "foo_files"? Er verbindet den Ordner mit einer der
+HTML-Dateien, aber welche er wählt, ist nicht definiert.</li>
+<li>Was ist mit "foo.htm", "foo_files" und "foo-Dateien"? Hier wird
+einer der Ordner mit der Datei verbunden, aber die Wahl ist ebenfalls
+nicht definiert.</li>
+<li>Oder stellen Sie sich diese Situation vor: "foo.htm", "foo.html",
+"foo_files", "foo-Dateien". Welche Datei ist mit welchem Ordner verbunden?
+Es werden zwei Verbindungen gemacht, aber es gibt keine Garantie auf Korrektheit.</li>
+</ul>
+Daher hier einige Tips zur Organisation Ihres Dokumentverzeichnisses, um solche Probleme zu vermeiden:<br>
+<ul>
+<li>Benennen Sie Ihre Dokumente um, wenn Unklarheiten bestehen.</li>
+<li>Benennen Sie Ordner nicht wie HTML-Ordner. Geben Sie Ihnen keine
+Name wie "journal_files", "office_files" usw. Und ein Ordnername wie
+"this_fails" kann tatsächlich zu einen Versagen führen, wie der Name
+anzeigt ("_fails" ist eine HTML-Ordner-Kennung, siehe oben).</li>
+<li>Einige Mehrseiten-Dokumente (z. B. umfangreiche Tutorials). die aus
+dem
+Web heruntergeladen wurden, verfügen nicht über diese typische
+Paarstruktur.
+Stattdessen gibt es eine Startseite namens "index.htm" oder Ähnliches,
+die auf die anderen Seiten verweist. Der oben beschriebene
+Paarungsmechanismus greift hier offensichtlich nicht (es werden keine
+Verbindungen hergestellt), und oft ist es besser, diese
+Mehrseiten-Dokumente überhaupt nicht zu indizieren oder sie in einem
+separaten Index zu indizieren.
+</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite</a></div>
+</body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - Abfrage-Syntax</title>
+
+<meta content="Hermann-Josef Beckers" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Zurück zur Hauptseite<br>
+</a></div>
+<div id="main">
+<h1 id="title">Abfrage-Syntax</h1><p>
+Die Abfragefähigkeiten werden von <a href="http://lucene.apache.org/">Apache
+Lucene</a> bereitgestellt, und sie sind im Detail <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">hier</a> erläutert.
+Das Folgende ist nur eine kurze und unvollständige Zusammenfassung der verfügbaren Abfrage-Syntax.</p><ul>
+<li>Boolsche Operatoren: Der Defaultoperator ist <code>OR</code>,
+d. h. wenn Sie <code>dog cat</code> eingeben, sucht
+DocFetcher nach Dokumenten, die eines der beiden oder beide Worte enthalten.
+Zur Suche nach Dokumenten, die beide Worte enthalten, geben Sie <code>dog
+AND cat</code> ein. Um ein Wort auszuschließen, benutzen Sie den Operator <code>NOT</code> oder "-" (Minus-Zeichen) vor dem Begriff.</li>
+<li>Erforderliche Begriffe: Um anzuzeigen, dass das zu suchende
+Dokument einen bestimmten Begriff enthalten muss, benutzen Sie den
+'+'-Operator wie folgt: <span style="font-family: monospace;">+dog cat</span>.<br>
+</li>
+<li>Phrasensuche: Um nach <code>dog cat</code> in dieser Reihenfolge zu suchen, geben Sie <code>"dog cat"</code> ein (mit den Anführungszeichen).</li>
+<li>Suche in speziellen Feldern: Derzeit sind die Felder "contents", "filename",
+"title" und "author" verfügbar. Das Feld "contents" ist der
+Standardsuchbereich, aber wenn Sie z. B. ein Dokument suchen, dessen
+Titel <code>dog</code> enthält, geben Sie <code>title:dog</code> ein. Für ein Dokument mit "dog" und/oder "cat" im Titel, geben Sie <code>title:"dog
+cat"</code> ein.</li>
+<li>Platzhalter: Ein Fragezeichen ('?') in einem Suchbegriff steht für
+ein unbekanntes Zeichen, ein Asterisk ('*') für eine unbekannte Anzahl
+unbekannter Zeichen. Beispiel: <code>Luc*</code>
+kann <code>Luc</code>, <code>Lucy</code>,
+<code>Lucene</code> usw. ergeben, während <code>Luc?</code> nur
+auf <code>Lucy</code> zutrifft. Suchbegriffe dürfen nicht mit ? oder * beginnen.
+<br>
+</li>
+<li>Begriffe gewichten: Sie können Worten eine Gewichtung zuweisen und
+damit den Treffergrad für ein bestimmtes Dokument erhöhen oder
+verringern, wenn der gewichtete Begriff in diesem Dokument auftritt.
+Dies erlaubt es Ihnen, die Relevanz-Sortierung der Ergebnisseite zu
+beeinflussen. Beispiel: <code>dog^4 cat</code> zeigt die Dokumente mit "dog" an der Spitze der Ergebnisseite an.<br>
+</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Zurück zur Hauptseite</a></div>
+</body></html>

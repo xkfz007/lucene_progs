@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=@VERSION@
+Encoding=UTF-8
+Name=DocFetcher
+GenericName=Desktop Search Application
+GenericName[de]=Desktop-Such-Programm
+Comment=Find documents that contain specific keywords
+Comment[de]=Suche nach Dokumenten, die bestimmte Wörter enthalten
+Exec=docfetcher
+Icon=/usr/share/pixmaps/docfetcher.png
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=GTK;Utility;
+X-AppInstall-Package=docfetcher

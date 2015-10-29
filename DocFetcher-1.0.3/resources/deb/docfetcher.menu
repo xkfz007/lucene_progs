@@ -1,0 +1,6 @@
+?package(docfetcher):\
+	needs="X11"\
+	section="Applications/File Management"\
+	title="DocFetcher"\
+	command="/usr/bin/docfetcher"\
+	icon="/usr/share/pixmaps/docfetcher.png"

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - Portable Dokumentverzeichnisse</title><meta content="Hermann-Josef Beckers" name="author"><link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite
+</a></div>
+<div id="main">
+<h1>Portable Dokumentverzeichnisse</h1><h2>
+Was ist die portable Version von DocFetcher?</h2><ul><li>
+Sie kann von der <a href="http://docfetcher.sourceforge.net/download.html">Projekt- Webseite</a> heruntergeladen werden.</li><li>Keine Installation: Sie entpacken einfach den Inhalt des heruntergeladenen Archivs in einen Ordner.</li><li>Kann sowohl von Linux als auch von Windows über die entsprechenden Startprozeduren (.exe/.bat, .sh) gestartet werden.</li><li>Wenn
+Sie alle zu indizierenden Dokumente in den DocFetcher-Ordner oder
+dessen Unterordner legen (mit Ausnahme des 'indexes'-Ordners), können
+Sie Ihr komplettes Dokumentverzeichnis zusammen mit DocFetcher und den
+Indizes frei verschieben.<br></li></ul><h2>Wozu ist das gut</h2><ul><li>
+Sie können das gesamte Dokumentverzeichnis einschließlich DocFetcher
+und den Indizes selbst nach einer Neuinstallation Ihres Betriebssystems
+behalten und das Verzeichnis woandershin verschieben.</li><li>Sie können Ihr Dokumentverzeichnis einfach auf einen anderen Computer übertragen.</li><li>Sie
+können Ihr Dokumentverzeichnis auf eine CD-ROM kopieren (Archivierung?)
+oder auf ein USB-Laufwerk oder andere Wechselmedien übertragen. </li><li>Sie können es auf ein verschlüsseltes Laufwerk legen (Empfehlung:&nbsp;<a href="http://www.truecrypt.org/">TrueCrypt</a>).</li><li>
+Ein einzelnes Dokumentverzeichnis kann über ein lokales Netzwerk
+gemeinsam genutzt werden, selbst wenn es eine Mischung aus Linux- und
+Windows-Computern gibt.</li><li>Sie können ein einzelnes Dokumentverzeichnis auf einem Dualboot-System (Linux/Windows) benutzen.</li></ul><h2>Hinweise zur Benutzung</h2><ul><li>Eigentlich
+selbstverständlich, aber trotzdem: Wenn Sie DocFetcher auf eine CD-ROM
+brennen, können Sie natürlich keine Änderungen der Einstellungen oder
+Indizes speichern; denken Sie deshalb daran, alles vor dem Brennen der
+CD-ROM korrekt zu konfigurieren.</li><li>
+Da DocFetcher ein Java-Programm ist, kann es nur auf Rechnern laufen,
+auf denen eine Java-Laufzeitumgebung (Java Runtime Environment, JRE),
+Version 1.6.0 oder neuer, installiert ist. Wenn Sie also ein
+CD-ROM-Archiv Ihres Dokumentverzeichnisses erstellen möchten, wollen
+Sie bestimmt auch ein JRE-Installationsprogramm mit auf die CD-ROM
+packen (oder zwei, wenn Sie mit Linux und Windows arbeiten).</li><li>
+Das Jonglieren mit mehreren Instanzen von DocFetcher kann etwas weniger
+verwirrend gemacht werden, wenn Sie für einige dieser Instanzen
+alternative Programmfenstertitel setzen. Öffnen Sie einfach die Datei
+"user.properties" mit einem Texteditor und geben Sie einen alternativen
+Titel in der "AppName="-Zeile ein.</li></ul><h2>Beschränkungen </h2><ul><li>Sie
+können mehrere Instanzen derselben DocFetcher-Installation zur gleichen
+Zeit laufen lassen. In der derzeitigen DocFetcher-Version überschreibt
+aber die zuletzt beendete Instanz alle Änderungen, die von zuvor
+beendeten Instanzen veranlasst wurden. Wenn Sie daher Änderungen (z. B.
+an Einstellungen oder Indizes) von der Instanz A machen wollen, müssen
+Sie sicherstellen, das A als letztes beendet wird oder die einzige
+Instanz mit Schreibberechtigung ist.</li><li>
+Wie oben erwähnt, wird das Dokumentverzeichnis nicht voll portabel
+sein, wenn einige der Dokumente sich irgendwo außerhalb des
+DocFetcher-Ordners befinden. Der Grund dafür ist, das DocFetcher nur
+dann relative statt absoluter Pfadnamen verwenden kann, wenn alle
+Dokumente sich im DocFetcher-Ordner befinden.</li><li>Dokumente
+innerhalb des 'indexes'-Ordner werden nicht indiziert. (Und überhaupt
+sollten Sie nichts in diesen Ordner ablegen, da es gelöscht werden
+könnte!)</li><li>Achten Sie auf Dateinamen-Inkompatibilitäten zwischen
+Linux und Windows. Z. B. können unter Linux Dateinamen Zeichen wie ":"
+oder "|" enthalten, das ist unter Windows nicht möglich. Daher können
+Sie ein Dokumentverzeichnis nur von Linux nach Windows oder umgekehrt
+verschieben, wenn es keine Dokumente mit inkompatiblen Dateinamen
+enthält. Ach ja, spezielle Zeichen wie deutsche Umlaute sind eine ganz
+andere Angelegenheit ...</li></ul></div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Zurück zur Hauptseite</a></div>
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<link rel="shortcut icon" href="../all/docfetcher16.png">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>DocFetcher - Schnelle Dokumentensuche</title>
+
+<meta name="author" content="Hermann-Josef Beckers">
+<link type="text/css" href="../all/web.css" rel="stylesheet">
+<meta name="keywords" content="DocFetcher, desktop search, file management, search, document, retrieval, indexing, Apache Lucene">
+<meta name="description" content="Homepage of DocFetcher, a desktop search application for fast document retrieval"></head><body>
+<div id="header"><img style="width: 750px; height: 209px;" alt="" src="../all/docfetcher-logo.png"></div>
+<div id="outer-page">
+<div id="page">
+<div id="menu">
+<ul id="nav-bar">
+<li id="current"><a href="index.html">Überblick</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="screenshots.html">Screenshots</a></li>
+<li><a href="about.html">Mehr</a></li>
+</ul>
+</div>
+<div id="content">
+<h1>Beschreibung</h1>
+<p>DocFetcher ist ein Open-Source-Suchprogramm, welches Ihnen eine
+schnelle Volltextsuche in Dokumenten auf Ihrem Computer ermöglicht. -
+Eine Art Google für Ihren
+Heimrechner.&nbsp;Die Anwendung unterstützt momentan Windows und Linux.<br>
+</p>
+<h1>Wie es funktioniert</h1>
+<ul>
+<li>DocFetcher erstellt sogenannte Indexdateien, die zur Suche benutzt
+werden. Sie können entweder permanente Indizes für umfangreiche
+Dokumentverzeichnisse erstellen, die sich selten ändern, oder temporäre
+für eine schnelle Volltextsuche in kleinen Ordnern. </li><li>Temporär-Indizes
+können durch Rechtsklick auf einen Ordner und Auswahl des Menüpunktes
+"Suche mit DocFetcher" erstellt werden, und sie werden nach
+Programmende automatisch entfernt. (Natürlich können Sie DocFetcher
+veranlassen, diese Indizes zu behalten)</li><li>Der Indizierungsprozeß
+kann für größere Verzeichnise einige Minuten dauern und benötigt
+normalerweise nur einige Sekunden für kleine Ordner (200 Dokumente =
+ungefähr 1 Minute).</li>
+<li>Nach der Indexerstellung können Sie Suchworte in das Suchfeld von
+DocFetcher eingeben, z. B. "Fourieranalyse" und die Enter-Taste
+drücken. DocFetcher wird dann alle Dokumente innerhalb der gewählten
+Ordner anzeigen, die diese Worte enthalten - zumeist in weniger als 1
+Sekunde.</li></ul>
+<h1>Aber da ist noch mehr ...</h1><ul>
+<li><span style="font-weight: bold;">Automatische Indexaktualisierung</span>:
+Indizes werden automatisch aktualisiert, wenn Dateien in den
+entsprechenden Ordnern verändert werden, selbst wenn DocFetcher nicht
+läuft. Dies geschieht über einen Hintergrundprozeß, der alle
+indizierten Ordner beobachtet. Dieser Hintergrundprozeß hat sehr wenig
+CPU-Bedarf, weil er, anstatt die Dateien selbst zu indizieren, sich nur
+merkt, welche Indizes beim nächsten Start von DocFetcher aktualisiert
+werden müssen.
+</li><li><span style="font-weight: bold;">Eine portable Version</span>:
+Läuft sowohl unter Windows als auch unter Linux. Sie können alle Ihre
+Dokumente dort hinein legen und dann den ganzen Ordner frei bewegen
+(also DocFetcher + Indizes + Dokumente). Mögliche Ziele sind andere
+Computer, verschlüsselte Laufwerke (<a href="http://www.truecrypt.org/">TrueCrypt</a>),
+CD-ROMs und USB-Sticks. Die portable Version kann auch genutzt werden,
+um ein indiziertes Dokumentverzeichnis in einem lokalen Netzwerk oder
+in einem Dual-Boot-System gemeinsam zu nutzen.</li><li><span style="font-weight: bold;">Erkennung von HTML-Paaren</span>,
+z. B. "foo.htm" und ein Ordner namens "foo_files". Jedes Paar wird als
+ein Dokument behandelt. Dieses Feature mag zunächst recht nutzlos
+erscheinen, aber es zeigte sich, dass dies die Qualität der
+Suchergebnisse wesentlich verbessert, wenn Sie nach HTML-Dateien
+suchen, da all die zusätzlichen Dateien in den HTML-Ordnern aus den
+Suchergebnissen verschwinden.</li>
+<li><span style="font-weight: bold;">Suche in Quellcode-Dateien</span>:
+Die Dateinamen-Erweiterungen, an denen DocFetcher einfache Text- und
+HTML-Dateien erkennt, sind vollständig anpassbar. Daher können Sie
+DocFetcher verwenden, um in jeder Art von Quellcode zu suchen.</li>
+</ul><h1>Weitere Features<br></h1><ul><li>Auf regulären Asudrücken basierender Ausschluss von Dateien von der Indizierung.</li><li>Verschiedene
+Dateioperationen mit dem Dokumentverzeichnis können über DocFetchers
+Oberfläche durchgeführt werden (z. B. Erstellen von Ordnern, Einfügen
+neuer Dateien).</li>
+<li>Vorschauanzeige mit Hervorhebung der Suchbegriffe und ein eingebauter, einfacher Web-Browser.</li>
+<li>Suchergebnisse können nach verschiedenen Kriterien sortiert und gefiltert werden (Dateityp, Dateigröße, Pfad usw.).</li><li>Systemweite Schnellzugriffstaste, um DocFetcher in den Vordergrund zu bringen.</li></ul>
+
+<ul>
+</ul>
+<h1>Unterstützte Dokument-Formate</h1>
+<ul>
+<li>HTML- und einfacher Text (beide anpassbar)</li>
+<li>Portables Dokument-Format (pdf)<br>
+</li>
+  <li>Microsoft Office (doc, xls, ppt)</li>
+  <li>Microsoft Office 2007 (docx, xlsx, pptx)<br>
+  </li>
+
+<li>OpenOffice.org Writer, Calc, Draw und Impress (odt, ods, odg, odp)<br>
+</li>
+<li>Rich-Text-Format (rtf)</li>
+<li>AbiWord (abw, abw.gz, zabw)</li>
+<li>Microsoft Compiled HTML Help (chm)</li>
+<li>Microsoft Visio (vsd)</li>
+<li>Scalable Vector Graphics (svg)<br></li>
+</ul><h1>Was manche Leute von diesem Programm halten...</h1>
+<table style="width: 100px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td align="center"><a href="http://www.download3000.com/download_47130.html"><img style="border: 0px solid ; width: 160px; height: 67px;" alt="Download3000.com Rating" src="../all/rating5.png"></a></td>
+<td align="center"><a href="http://www.rosoftdownload.com/download/Windows/DocFetcher" title="Download From www.rosoftdownload.com"><img src="http://www.rosoftdownload.com/award/rosoftd_award_139x70.gif" alt="Download From www.rosoftdownload.com" border="0" height="70" width="139"></a></td>
+<td align="center"><a href="http://www.softdownload22.com/pagina_produs.php?variabila1=2984" title="5 stars award from www.softdownload22.com"><img src="http://www.softdownload22.com/imagini/award175x68.gif" alt="5 stars award from www.softdownload22.com" border="0" height="68" width="175"></a></td>
+</tr>
+<tr>
+<td align="center"><a target="_new" href="http://www.softsea.com/review/DocFetcher.html">
+<img src="http://www.softsea.com/images/pro-logo-5stars-1.gif" alt="Reviews on SoftSea" border="0">
+</a></td>
+<td align="center"><a href="http://www.geardownload.com/system/docfetcher.html"><img alt="5 Stars Rating" src="../all/5stars.gif" border="0"></a></td>
+<td align="center"><a href="http://www.softpedia.com/progClean/DocFetcher-Clean-110899.html"><img style="border: 0px solid ; width: 170px; height: 116px;" alt="Softpedia 100% Clean Award" src="../all/softpedia_free_award_f.gif"></a></td>
+</tr>
+<tr>
+<td align="center"><a href="http://www.fiberdownload.com/Download/20876/DocFetcher"><img style="border: 0px solid" alt="Fiberdownload Award" src="../all/award2_151_50.png"></a></td>
+<td align="center"><a href="http://www.soft82.com/download/windows/portable-docfetcher/"><img src="../all/soft82_award_88x31.gif" width="88" height="31" border="0" alt="Soft82 Award"></a></td>
+<td align="center"><a href="http://www.softwarecocktail.com/docfetcher-download-10727.html"><img src="../all/award51.gif" alt="5 cocktails award and review from SoftwareCocktail.com"></a></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="http://www.softoxi.com/docfetcher.html"><img src="http://www.softoxi.com/images/public/awards/award_star.png" border="0" alt="DocFetcher video tutorial at softoxi.com"></a></td>
+</tr>
+</tbody>
+</table>
+<h1>Vergleich zu anderen Suchprogrammen<br>
+</h1>Mindestens zwei Dinge unterscheiden DocFetcher von anderen
+Suchprogrammen wie z. B. Google Desktop. Erstens beschränkt es sich
+darauf, nur das zu indizieren, was Sie benötigen, und nicht die ganze
+Festplatte, und zweitens indiziert es nur Dokumente - Bilder, Musik,
+Videos usw. werden übersprungen. Hier ist unsere Begründung dafür:<br>
+<ul>
+<li>Je größer der Suchbereich ist, umso mehr "Rauschen" findet sich in
+den Suchergebnissen. Dementsprechend werden Sie finden, dass DocFetcher
+im Allgemeinen bessere Suchergebnisse liefert als ähnliche Programme.</li>
+  <li>Weniger
+Dateien zu indizieren = schnellere Indizierung und weniger
+CPU-Belastung. (Hassen Sie es nicht auch, wenn ständig ein Programm im
+Hintergrund sehr beschäftigt ist?)</li>
+  <li>Der wirkliche Nutzen von
+Google und anderen Websuchmaschinen liegt in der Dokumentindizierung,
+weil sie eine sehr gute Schätzung des <span style="font-style: italic;">Inhalts</span>
+eines Dokuments gibt. Die Indizierung von Bildern oder Videos jedoch
+ist nicht besonders sinnvoll, weil der tatsächliche Inhalt eines Bildes
+oder eines Videos einer Textextrahierung nicht zugänglich ist.</li>
+
+<li>Warum sollen Sie ein weiteres Programm installieren, um auf Bilder,
+Musik, Videos, E-Mails usw. zuzugreifen, wenn Ihr
+Lieblings-Bildbetrachter, -Medienabspielprogramm, -E-Mail-Programm usw.
+seit Jahren daraufhin optimiert wurde, <span style="font-style: italic;">genau das</span>
+zu tun? Warum sollten Sie dafür eine halbfertige, generische
+Suchoberfläche verwenden? Daher - keine Bilder, keine Musik, keine
+Videos ... - was bleibt?&nbsp;Dokumente.
+Und dafür ist DocFetcher bestens geeignet. (Übrigens, wir empfehlen <a href="http://www.launchy.net/">Launchy</a>
+für das schnelle Starten von Startmenü-Einträgen.)<br>
+</li>
+</ul>
+Daher: Wenn Sie keine Augenweide brauchen, aber ein mächtiges
+Open-Source-Programm möchten, das genau das tut, was Sie von ihm
+erwarten, <span style="font-style: italic;">ohne</span> Ihre Privatsphäre zu verletzen und <span style="font-style: italic;">ohne</span> "Extras" zu installieren, dann ist dieses Programm für Sie das Richtige!
+<ul>
+</ul>
+</div>
+<div id="footer">
+<div id="sf-logo"><a href="http://sourceforge.net/donate/index.php?group_id=197779"><img src="http://images.sourceforge.net/images/project-support.jpg" alt="Support This Project" border="0" height="32" width="88"></a><a href="http://sourceforge.net/projects/docfetcher"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=197779&amp;type=13" alt="Get DocFetcher at SourceForge.net. Fast, secure and Free Open Source software downloads" border="0" height="30" width="120"></a></div>
+<div id="copyright">Website Copyright
+© 2009-2010 <span class="gI">Hermann J. Beckers</span></div>
+</div>
+</div>
+
+<div id="lang-buttons">
+<a href="../en/index.html" title="English"><img style="width: 20px; height: 12px;" src="../all/en.png" border="0"></a><br>
+<a href="../de/index.html" title="Deutsch"><img style="width: 20px; height: 12px;" src="../all/de.png" border="0"></a><br>
+</div>
+
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://apps.sourceforge.net/piwik/docfetcher/" : "http://apps.sourceforge.net/piwik/docfetcher/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 1;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p><img src="http://apps.sourceforge.net/piwik/docfetcher/piwik.php?idsite=1" alt="piwik"></p></noscript></object>
+<!-- End Piwik Tag -->
+</body></html>

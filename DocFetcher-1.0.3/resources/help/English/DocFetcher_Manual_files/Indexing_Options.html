@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - Indexing Options</title>
+
+<meta content="Tran Nam Quang" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page
+</a></div>
+<div id="main">
+<h1>Indexing Options</h1>
+<div style="max-width: 200px; float: left;"><img style="width: 200px; height: 215px;" alt="" src="Index_Management.png"><br>
+</div>
+<div style="margin-left: 200px; font-size: small; min-height: 215px;">
+<ol>
+<li><span class="p-label">Tab bar</span>:
+Represents a queue of folders to be indexed.</li>
+<li><span class="p-label">Add/Remove</span>:
+You can use the "Add folder to queue" button to add items to the
+queue and&nbsp;the close buttons on the tabs to remove queue items.
+Each queue item can be configured
+separately using the controls below the tab bar.</li>
+<li><span class="p-label">Close this window</span>:
+Clicking on this button will close
+this window and abort a running indexing process if there is one.</li>
+<li><span class="p-label">Target folder</span>:
+The path of the folder the currently displayed queue
+item corresponds to.</li>
+<li><span class="p-label">Text extensions</span>:
+The file extensions of the files that
+should be indexed as plain text, separated by whitespace. Typical
+values are: c, cpp, log, java, py. In case of a conflict with existing
+file extensions the user-defined file extensions will be given higher
+priority. To get a list of available file extensions underneath the current target folder, click on the "..." button.</li>
+<li><span class="p-label">HTML extensions</span>:
+The file extensions of the files that
+should be indexed as HTML documents. This setting has higher priority
+than the user-defined text file extensions.&nbsp;To get a list of
+available file extensions underneath the current target folder, click
+on the "..." button.</li>
+<li><span class="p-label">Skip files</span>:
+A concatenation of regular
+expressions. Any file with a filename that matches one of these
+patterns will be excluded from indexing. To find out if your entered
+pattern matches a particular file, use the tool described in (12). For more
+information on regular expressions, see <a href="Skip_Files_Regex.html">here</a>.</li>
+<li><span class="p-label">HTML pairing</span>:
+Whether to combine HTML files and their
+associated folders, such as "foo.html" and a folder in the same
+directory named "foo_files". For more information, see <a href="HTML_Pair_Detection.html">here</a>.</li><li><span class="p-label">Delete index on exit</span>:
+Delete the index files for this folder after program termination.
+Enabling this allows you to create "temporary indexes", a concept
+related to <a href="Shell_Integration.html">this</a>.</li>
+<li><span class="p-label">Help</span>:
+Open this document in a web browser.</li>
+<li><span class="p-label">Restore Defaults</span>:
+Restore the default indexing
+options.</li>
+<li><span class="p-label">Run</span>:
+This button tells DocFetcher&nbsp;you're done
+with configuring this queue item and that it is ready for processing.
+Note that this button only sets the 'run' flag for this particular
+item, not for other items in the queue.</li>
+<li><span class="p-label">Regular expression check</span>:
+This little tool tells you
+whether the pattern given in the "Skip files" text box matches the file specified here.</li>
+</ol>
+</div>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page</a></div>
+</body></html>

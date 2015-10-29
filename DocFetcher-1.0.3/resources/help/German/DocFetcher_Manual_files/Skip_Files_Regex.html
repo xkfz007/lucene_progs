@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - &Uuml;berspringen von Dateien mittels regul&auml;rer Ausdr&uuml;cke</title><meta content="Hermann-Josef Beckers" name="author"><link rel="stylesheet" href="style.css" type="text/css"></head>
+<body>
+<div class="header"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Zur&uuml;ck zur Hauptseite
+</a></div>
+<div id="main">
+<h1>&Uuml;berspringen von Dateien mittels regul&auml;rer Ausdr&uuml;cke</h1><p>DocFetcher
+bietet eine M&ouml;glichkeit, bestimmte Dateien mittels regul&auml;rer Ausdr&uuml;cke von der Indexierung auszunehmen. Diese regul&auml;ren Ausdr&uuml;cke k&ouml;nnen in dem Feld "Dateien &uuml;berspringen" im Dialog <a href="Indexing_Options.html">Indexierungsoptionen</a> eingef&uuml;gt werden. Das Zeichen '$' wird benutzt, um zwei regul&auml;re Ausdr&uuml;cke zu trennen. </p><p> Dies ist sicher nicht der richtige Ort f&uuml;r eine vertiefte Diskussion &uuml;ber regul&auml;re Ausdr&uuml;cke (s. dazu Wikipedia), aber einige praktische Beispiele sollten ausreichen:</p><h2>&Uuml;berspringe alle MS Excel-Dateien:&nbsp;.*\.xls</h2>Der "." steht f&uuml;r ein unbekanntes Zeichen. "*" bedeutet das vorhergehende Zeichen, kein- oder mehrmals vorkommend, so dass in diesem Fall ".*" f&uuml;r eine Reihe von 0 oder mehreren unbekannten Zeichen steht. Da der "." bereits als spezielles Zeichen verwendet wird und wir ihn selbst als Zeichen treffen wollen, m&uuml;ssen wir ihn 
+<span style="font-style: italic;">maskieren</span>, indem wir ein "\" davor setzen. Die Zeichen A-Z, a-z und 0-9 stehen f&uuml;r sich selbst. Daher trifft 
+".*\.xls" auf Dateinamen beliebiger L&auml;nge zu, die mit einem Punkt und der Folge "xls" enden.<br>
+<h2>Einige Lizenztextdateien ausschlie&szlig;en: license\.txt $ License\.txt $ LICENSE\.txt</h2>
+Wie oben erw&auml;hnt, kann das Zeichen "$" verwendet werden, um zwei oder mehr regul&auml;re Ausdr&uuml;cke zu kombinieren. Als Ergebnis wird dieses Muster alle Dateien mit den Namen "license.txt", "License.txt" und "LICENSE.txt" ausschlie&szlig;en. Wieder muss der Punkt maskiert werden, weil er ein Sonderzeichen ist. <br><h2>Eine Reihe von Ziffern treffen: journal[0-9]*\.doc</h2>
+Stellen Sie sich vor, Sie m&ouml;chten eine Anzahl Word-Dokumente, die mit "journal" beginnen und mit einem Zeitstempel enden (z. B. "journal2008.doc"), ausschliessen. Was Sie aber <span style="font-style: italic;">nicht</span> wollen, ist der Ausschlu&szlig; von Dateien wie "journalism.doc". Ein Ausdruck wie
+"journal.*\.doc" passt nicht. Die L&ouml;sung ist es, den "." durch "[0-9]" zu ersetzen: W&auml;hrend "." auf jedes Zeichen zutrifft, passt "[0-9]" nur auf eine Ziffer. Daher deckt "[0-9]*" eine Reihe von Ziffern ab.
+<br><h2>Mehr gef&auml;llig?</h2><p> Schauen Sie sich dies an <a href="http://java.sun.com/javase/6/docs/api/java/util/regex/Pattern.html">Referenzseite</a> oder lesen Sie eines der Myriaden von Tutorials zu regul&auml;ren Ausdr&uuml;cken, die im Web zu finden sind.</p>
+<h2>Zusammenspiel zwischen HTML-Paarung und Dateiausschlu&szlig;</h2><p>
+Wenn die HTML-Paarung aktiviert ist und DocFetcher auf ein HTML-Datei-/Verzeichnis-Paar trifft, werden die Ausschlu&szlig;muster nur auf die HTML-Datei angewandt, nicht auf die Dateien im zugeh&ouml;rigen HTML-Verzeichnis. Anders gesagt, die Ausschlu&szlig;mechanismen arbeiten nicht auf Dateien, sondern auf vollst&auml;ndigen Dokumenten.
+</p></div>
+<div class="footer"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Zur&uuml;ck zur Hauptseite</a></div>
+</body></html>

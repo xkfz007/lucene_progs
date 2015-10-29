@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+ 
+  
+
+
+<meta content="text/html; charset=utf-8" http-equiv="content-type"><title>DocFetcher Manual</title>  
+
+<meta content="Tran Nam Quang" name="author"> 
+<meta name="generator" content="Bluefish 1.0.7"> 
+<meta name="author" content="Tran Nam Quang"> 
+<meta name="CREATED" content="20071010;12210300"> 
+<meta name="CHANGEDBY" content="Tran Quang"> 
+<meta name="CHANGED" content="20071010;21544900"> 
+<link rel="stylesheet" href="DocFetcher_Manual_files/style.css" type="text/css"></head><body> 
+<div id="main"> 
+<div style="float: right; color: gray;"> DocFetcher 1.0.3<br>
+ </div> 
+<h1> Introdução </h1> 
+
+<p> DocFetcher é um software livre que permite-lhe acessar rapidamente
+documentos em seu computador através de palavras-chave. É como o Google
+para o seu repositório local. </p> 
+
+<p> <small> (Dica: Se você estiver lendo este documento dentro
+DocFetcher e prefere lê-lo no seu navegador da Web, clique em "Abrir no
+Navegador Externo", botão direito acima deste painel.) </small> </p> 
+
+<p> <span class="p-label"> Criar um índice </span>: Clique com o botão
+direito do mouse sobre o painel "Escopo da Busca" no lado esquerdo e
+selecione "Criar Índice ... " Depois escolha uma pasta para ser
+indexada. Para iniciantes, a pasta deve ser pequena com um poucos
+arquivos, digamos, 50? Depois de selecionar a pasta, uma janela de
+configuração aparecerá. A configuração padrão deve ser suficiente,
+portanto basta clicar sobre o botão "Executar" e aguarde até que
+DocFetcher termine a indexação dos documentos. </p> 
+
+<p> Alternativamente, você pode arrastar uma pasta de seu gerenciador
+de arquivos e soltá-la no painel "Escopo da Pesquisa". Outra forma de
+criar índices é clicando com o lado direito do mouse em uma pasta no
+seu gerenciador de arquivos (Veja abaixo: "Características notáveis"). </p> 
+
+<p> <span class="p-label"> Realizar uma pesquisa </span>: Digite um
+termo para pesquisa na caixa de texto acima do painel do resultado (a
+tabela com cabeçalhos) e pressione Enter. Os resultados da pesquisa
+serão apresentados no painel de resultados e dividido em páginas de
+resultados, se o número for superior a um certo limite. Você pode
+navegar pelas páginas usando os botões de seta para a direita na caixa
+de texto que você digitou o termo de pesquisa </p> 
+
+<p> <span class="p-label"> Filtrar ou ordenar os resultados </span>:
+Você pode entrar com alguns valores na caixa "Mínimo/Máximo Tamanho de
+Arquivo" para filtrar os arquivos com um tamanho do arquivo abaixo do
+mínimo e/ou acima do valor máximo. Você também pode selecionar ou
+desmarcar os itens nos paineis "Tipos de Aquivo" e "Escopo da Pesquisa"
+para filtrar certos tipos de arquivos ou arquivos em pastas
+específicas. Clique no cabeçalho da coluna do painel de resultado para
+ordenar os resultados pelo critério escolhido. </p> 
+
+<p> <span class="p-label"> A painel de visualização </span>: Abaixo (ou
+à direita) do painel de resultados você pode encontrar o painel de
+visualização, que provê uma visualização "text-only" e o termo de
+pesquisa em destaque, e, para documentos HTML, tem-se um simples
+navegador web adicional. (<a href="DocFetcher_Manual_files/XULRunner.html"> Você pode ter que instalá-lo primeiro. </a>) </p> 
+
+<p> <small> (Se você está lendo este documento dentro DocFetcher,
+seguindo as instruções no próximo parágrafo, fará este manual
+desaparecer. Você pode abri-lo em um navegador externo com o botão
+"Abrir no navegador externo" ou restaurá-lo mais tarde com o botão "?
+".) </small> </p> 
+
+<p> <span class="p-label"> Abrir um documento </span>: Se você acha que
+você encontrou o que você está procurando, dê um duplo clique sobre um
+dos itens no painel de resultados. Por padrão, DocFetcher irá
+automaticamente para a bandeja do sistema depois de abrir um arquivo.
+DocFetcher também irá para a bandeja do sistema se você clicar no botão
+de minimizar a janela do programa. Para trazê-lo de volta, clique sobre
+o ícone da bandeja do sistema ou pressione a "chave global" (geralmente
+Ctrl + F8). </p> 
+
+<p> <span class="p-label"> Atualizações de Índices</span>: Se os
+documentos no repositório de documentos são adicionados, removidos ou
+alterados, os correspondentes índices precisam ser atualizados. Isto é
+feito automaticamente de duas formas: (1) Se o DocFetcher está sendo
+executado, ele detecta as alterações e atualiza os índices
+imediatamente. (2) Se o DocFetcher não está sendo executado, as
+alterações são detectadas por um programa "deamon" que é executado em
+segundo plano, os índices afetados são atualizados na próxima vez que
+DocFetcher for iniciado. <br> 
+
+<span style="text-decoration: underline;"> 
+Nota </span>: Se você
+estiver usando a versão portátil do DocFetcher e deseja que o daemon
+seja executado automaticamente na inicialização, você tem que
+adicioná-lo manualmente ao seu sistema operacional na lista de
+programas a serem executados na inicialização do sistema. <br> 
+</p> 
+
+<p> <span style="font-weight: bold;"> Não indexe discos inteiros! </span>:
+Ao contrário de outras aplicações desktop (por exemplo, o Google
+Desktop), DocFetcher não foi concebido para indexação de discos
+inteiros (por exemplo, "C:\"), e pode "explodir" se você tentar
+fazê-lo. O DocFetcher foi concebido para que você só indexe o que você
+realmente precisa, o que poupa tempo e espaço em disco, e também dá
+muito melhores resultados de pesquisa. </p> 
+
+<h1> Características Notáveis <br> </h1>
+ 
+<p> <span class="p-label"> Repositório de Documentos Portáteis </span>:
+A versão portátil do DocFetcher permite a você agrupar DocFetcher, seus
+documentos e seus índices associados em uma única pasta, você pode,
+então, movimentar livremente, por exemplo, para uma mídia removível,
+outros volumes encriptados ou computadores. Isto pode também ser
+utilizado para compartilhar um repositório de documentos local em toda
+a rede local ou entre sistemas operacionais Windows / Linux ou dual
+boot. <a href="DocFetcher_Manual_files/Portable_Repositories.html"> Detalhes. </a> </p> 
+<p> <span class="p-label"> Acesse o DocFetcher clicando com o lado direito do mouse sobre uma pasta </span>:
+Às vezes, pode ser bastante conveniente a realização de uma pesquisa de
+texto completo em uma pasta apenas usando o botão direito do mouse
+sobre a pasta no gerenciador de arquivos, sem a necessidade de criar
+qualquer índice. DocFetcher oferece um recurso (que você pode chamá-lo
+de "índices temporários") que chega muito perto disso. Note que isto
+requer a instalação manual se você estiver usando o Linux e / ou a
+versão portátil do DocFetcher. Clique <a href="DocFetcher_Manual_files/Shell_Integration.html"> aqui </a> para saber mais. </p>
+ 
+<p> <span class="p-label"> Detecção de pares  de HTML</span>: Pares de
+arquivos HTML e pastas associadas (por exemplo, "foo.htm" e
+"foo_files") podem ser tratadas como um único documento. Clique <a href="DocFetcher_Manual_files/HTML_Pair_Detection.html"> aqui </a> 
+para uma descrição de como isto funciona, as raras situações em que talvez não funcione, e também como evitar essas situações.</p><span class="p-label">Extensões de Arquivo Customizáveis </span>:
+Você pode especificar quais arquivos devem ser indexados como texto
+simples. Esse recurso pode ser útil para programadores que querem
+indexar arquivos de código fonte. Arquivos com extenção HTML também
+podem ser customizados. <br>
+ 
+
+ <span class="p-label"> Indexação de múltiplas pastas de uma só vez </span>:
+Existe um botäo "Adicionar pasta à fila" no canto superior direito da
+janela de configuração da indexação que permite colocar várias pastas
+em uma fila, e que serão processadas uma após a outra. <p> <span class="p-label"> Excluindo determinados arquivos da indexação </span>: 
+Você pode excluir determinados arquivos da indexação introduzindo uma ou mais expressões regulares. <a href="DocFetcher_Manual_files/Skip_Files_Regex.html"> Detalhes </a>. </p> 
+
+<h1> <a name="User_Interface_Reference"> </a> Referência para Interface com Usuário </h1> 
+<ul> 
+<li> <a href="DocFetcher_Manual_files/Query_Syntax.html"> Sintaxe de Consulta </a> </li> 
+<li> <a href="DocFetcher_Manual_files/Keyboard_Shortcuts.html"> Atalhos do Teclado </a> </li> 
+<li> <a href="DocFetcher_Manual_files/Indexing_Options.html"> Opções de Indexação </a> </li> 
+
+<ul class="level2"> 
+<li> <a href="DocFetcher_Manual_files/Skip_Files_Regex.html"> Ignorando arquivos usando expressões regulares </a> </li> 
+<li> <a href="DocFetcher_Manual_files/HTML_Pair_Detection.html"> Como a detecção de pares de HTML funciona </a> </li> 
+</ul> 
+
+<li> <a href="DocFetcher_Manual_files/Preferences.html"> Preferências <br> </a> </li> 
+</ul> 
+
+<h1> <a name="Additional_Information"> </a> Outras Informações <br> </h1> 
+
+<ul> 
+<li> <a href="DocFetcher_Manual_files/XULRunner.html"> Habilitando o navegador web embutido / Substituir o Internet Explorer como o navegador web embutido </a> </li> 
+<li> <a href="DocFetcher_Manual_files/Portable_Repositories.html">  Repositório de Documentos Portátill</a> </li> 
+<li> <a href="DocFetcher_Manual_files/Shell_Integration.html">Iniciar DocFetcher clicando com o lado direito do mouse sobre a pasta</a> </li> 
+<li> <a href="DocFetcher_Manual_files/Known_Bugs_and_Limitations.html"> Alguns bugs e limitações já detectados </a> </li> 
+
+<ul class="level2"> 
+<li> <a href="DocFetcher_Manual_files/Indexing_Huge_Documents.html"> "Memória Insuficiente na Máquina Virtual Java"</a> </li> 
+</ul> 
+
+<li> Onde enviar <a href="http://sourceforge.net/tracker/?group_id=197779&amp;atid=962834">  relatórios de defeitos </a>, 
+<a href="http://sourceforge.net/tracker/?group_id=197779&amp;atid=962837">  solicitações de novas funcionalidades </a> e 
+<a href="http://sourceforge.net/tracker/?group_id=197779&amp;atid=962835"> perguntas que este manual não pode responder </a> (nenhum cadastro requerido). 
+<a href="http://docfetcher.wiki.sourceforge.net/How+to+translate+DocFetcher"> Você também pode nos ajudar a traduzir este programa </a>. </li> 
+<li> <a href="DocFetcher_Manual_files/Notification.html"> Como receber notificação de novas versões </a> </li> 
+<li> <a href="DocFetcher_Manual_files/About_The_Project.html"> Sobre o projeto </a>  
+</li></ul> 
+</div> 
+<div class="footer"> <span style="color: rgb(128, 128, 128);"> DocFetcher Manual - Copyright (c) 2009-2010 Daniela Cruzes </span> 
+</div> 
+</body></html>

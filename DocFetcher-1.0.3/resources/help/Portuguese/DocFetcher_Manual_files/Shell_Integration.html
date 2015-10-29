@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "- //W3C//DTD HTML 4.01// EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> <head> 
+<meta content="text/html; charset=utf-8" http-equiv="content-type"> <title> Manual DocFetcher - Iniciando DocFetcher em uma pasta pelo clique do lado direito do mouse sobre ele </title> 
+
+<meta content="Tran Nam Quang" name="author"> 
+<link rel="stylesheet" href="style.css" type="text/css"> </head> 
+<body> 
+<div class="header"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+<div id="main"> 
+<h1> <span class="p-label"> Iniciando DocFetcher em uma pasta pelo clique do lado direito do mouse sobre ele.  </span> </h1> 
+<h2> Como funciona: </h2> 
+<ul> 
+<li> Optamos por implementar "índices temporários" no DocFetcher.</li> 
+<li> Índices Temporários são criados quando você usa o clique com o lado direito do mouse sob uma pasta em seu gerenciador de arquivos (por exemplo, o Windows Explorer) e seleciona "Pesquisar 
+Com DocFetcher ". </li> 
+<li> Esta ação irá iniciar o DocFetcher e, a pasta selecionada será automaticamente programada para a indexação. Tudo que você necessita fazer aqui é a iniciar a indexação, clicando no botão "Executar". 
+Você pode, também alterar as opções de indexação primeiro. </li> 
+<li> Aguarde até que a indexação seja concluída. </li> 
+<li> Os índices que são criados desta forma têm uma opção "Apagar ao Sair" acionada, e estão marcadas com um [X] no painel "Escopo da Pesquisa". Este sinalizador indica que o índice será removido quando você fechar o programa. </li> 
+<li> Se você mudar de idéia e decidir transformar um índice temporário em  permanente, clique com o lado direito do mouse sobre a pasta no painel Escopo da Pesquisa e seleccione "Remova Deleção ao Sair". </li> 
+</ul> 
+<h2> Instalação no Windows </h2> 
+A opção "Pesquisar com o DocFetcher" no menu de contexto é automaticamente adicionada se você instalou DocFetcher com o Windows Installer, e é também removido automaticamente após desinstalação. Se você estiver usando a versão portátil para Windows, é necessária uma instalação manual: <br> 
+<ul> 
+<li> Para registrar o menu de contexto, execute o DocFetcher em um prompt de comando com o parâmetro"--register-contextmenu", ex.: <span style="font-family: monospace;">C:\Program
+Files\DocFetcher\DocFetcher.exe --register-contextmenu</span></li>
+<li> Se você mover a pasta do DocFetcher para um lugar diferente, você terá que voltar a registar o menu de contexto. A entrada anterior será ignorada. </li> 
+<li> Para cancelar o menu de contexto, execute DocFetcher com "--unregister-contextmenu", e.x.: <span style="font-family: monospace;">C:\Program
+Files\DocFetcher\DocFetcher.exe --unregister-contextmenu</span></li>
+ 
+<li> Note que o registo e as operações são dependentes da linguagem isso significa que se o seu windows for em português voce deve procurar saber qual é o comando em português correspondente. </li>
+<li> Alternativamente, você pode simplesmente remover o "Pesquisar com DocFetcher" no registro do Windows: HKEY_CLASSES_ROOT -> Directory -> shell -> ...)< br> 
+</li> 
+</ul> 
+
+<h2> Instalação no Linux </h2> 
+<p> Se você iniciar o DocFetcher com uma lista de diretórios separada por espaço como parâmetro,  logo após a inicialização, o DocFetcher irá colocar esses diretórios na fila de indexação, e vai marcá-los com a opção "Apagar ao sair" . O DocFetcher pode rejeitar alguns dos parâmetros, se eles não fizerem sentido (por exemplo, o diretório não existe). Se um caminho contém caracteres em branco, este deve ser posto 
+entre aspas. </p> 
+<p> A fim de integrar DocFetcher com o seu gerenciador de arquivos,  você terá que descobrir como criar um menu de contexto no seu gerenciador de arquivos para iniciar DocFetcher nas pastas selecionadas como 
+parâmetro de inicialização. </p> 
+<p> Veja como você pode fazê-lo no Nautilus: </p> 
+<ul> 
+<li> Instale o pacote 'nautilus-actions' (e.g. <span style="font-family: monospace;">sudo apt-get install
+nautilus-actions</span>).</li> 
+<li> Vá para 'Preferences &gt; Nautilus Actions Configuration', clique em 'Import/Export'.</li>
+ 
+<li> Importar o esquema de arquivos que foi enviado com o DocFetcher. Localização do esquema de arquivos: </li> 
+<ul> 
+<li> Pacote Debian Linux: /usr/share/docfetcher</li> 
+<li> Linux Portátil: Na pasta do DocFetcher: </li> 
+</ul> 
+<li> Se você estiver usando a versão portátil, você terá que modificar a configuração importada: Selecione a configuração, clique em "Editar" e ajuste o caminho para o executável (DocFetcher.sh) e o ícone do arquivo (icons/docfetcher16.png). Você terá que fazer isso toda vez que você mover a pasta do DocFetcher. </li> 
+<li> Para remover a entrada do menu de contexto, basta apagá-lo na "Nautilus Action Configuration". <br> 
+</li> 
+</ul> 
+</div> 
+<div class="footer"> <a href="../DocFetcher_Manual.html#Additional_Information"> Voltar à página principal </a> </div> 
+</body> </html>

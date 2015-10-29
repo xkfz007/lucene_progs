@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - Skipping files using regular expressions</title><meta content="Tran Nam Quang" name="author"><link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Back
+to main page
+</a></div>
+<div id="main">
+<h1>Skipping files using regular expressions</h1><p>DocFetcher provides
+a way to exclude certain files from indexing using regular expressions.
+The regular expression(s) can be entered into the "Skip files" box on
+the <a href="Indexing_Options.html">Indexing Options</a> dialog. The '$' character is used to separate two regular expressions.</p><p>This
+may not be the right place for an in-depth discussion of regular
+expressions (check Wikipedia for that), but a few practical examples
+should suffice:</p><h2>Exclude all MS Excel files:&nbsp;.*\.xls</h2>The
+"." stands for one unknown character. The "*" means "the preceding
+character, zero or more times", so in this case ".*" stands for a
+series of zero or more unknown characters. Since the "." is already
+used as a special character, when we want to match the dot itself in a
+filename, we have to <span style="font-style: italic;">escape</span>
+it, by putting a "\" in front of it. The characters A-Z, a-z and 0-9
+all stand for themselves. This is why ".*\.xls" matches filenames of
+any length that end with a dot and the sequence "xls".<br><h2>Exclude some license text files: license\.txt $ License\.txt $ LICENSE\.txt</h2>As
+mentioned above, the "$" character can be used to combine two or more
+regular expressions. As a result, this pattern will exclude all files
+with the name "license.txt", "License.txt" and "LICENSE.txt". Again,
+the dot must be escaped because it's a special character.<br><h2>Matching a sequence of digits: journal[0-9]*\.doc</h2>Suppose
+you want to exclude a set of Word documents that all start with
+"journal" and end with a timestamp, like so:
+journal2008.doc. Moreover, what you <span style="font-style: italic;">dont</span>
+want is to exclude files like "journalism.doc". An expression like
+"journal.*\.doc" isn't going to work, obviously. The solution is to
+replace the "." with "[0-9]": While "." matches any character, "[0-9]"
+matches one digit. Therefore "[0-9]*" will match a sequence of digits.<br><h2>Want more?</h2><p>Have a look at this <a href="http://java.sun.com/javase/6/docs/api/java/util/regex/Pattern.html">reference page</a> or read some of the myriad of regular expression tutorials on the web.</p><h2>Interaction between HTML pairing and file exclusion</h2><p>If
+the HTML pairing is activated and DocFetcher encounters an HTML
+file/folder pair, the exclusion patterns will be applied to the HTML
+file only, not to files inside the associated HTML folder. In other
+words, the exclusion mechanism doesn't work on files, but on whole
+documents.</p></div>
+<div class="footer"><a href="../DocFetcher_Manual.html#User_Interface_Reference">Back
+to main page</a></div>
+</body></html>

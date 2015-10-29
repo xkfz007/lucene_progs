@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>DocFetcher Manual - Launch DocFetcher on a folder by rightclicking on it</title>
+
+<meta content="Tran Nam Quang" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head><body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page
+</a></div>
+<div id="main">
+<h1><span class="p-label">Launch DocFetcher on a
+folder by rightclicking on it</span></h1>
+<h2>How it works:</h2>
+<ul>
+<li>Instead of index-free full-text search, we chose to
+implement "temporary indexes" , because the former would have been too
+difficult to integrate with the existing program architecture.</li>
+<li>Temporary indexes are created when you rightclick on a
+folder in your file manager (e.g. Windows Explorer), and select "Search
+With DocFetcher".</li>
+<li>This will launch DocFetcher, and the selected folder is
+automatically scheduled for indexing. All you need to do here is to
+give the greenlight to the indexing by clicking on the "Run" button.
+You can, of course, alter the indexing options first.</li>
+<li>Wait until the indexing is completed.</li>
+<li>Indexes that are created this way have a "delete on exit"
+flag, and they are marked with an [X] in the Search Scope panel. This
+flag indicates that the index will be removed after you leave the
+program.</li>
+<li>If you change your mind and decide to make a temporary
+index permanent, rightclick on it in the Search Scope panel and select
+"Toggle Deletion On Exit".</li>
+</ul>
+<h2>Installation on Windows</h2>
+The "Search With DocFetcher" context menu entry is added automatically
+if you installed DocFetcher with the Windows installer, and it is also
+removed automatically after deinstallation. If you're using the
+portable version on Windows, manual installation is required:<br>
+<ul>
+<li>To register the context menu entry, run DocFetcher in a
+command prompt with the parameter "--register-contextmenu", e.g.: <span style="font-family: monospace;">C:\Program
+Files\DocFetcher\DocFetcher.exe --register-contextmenu</span></li>
+<li>If you move the DocFetcher folder to a different place,
+you'll have to re-register the context menu entry. The previous entry
+will be overridden.</li>
+<li>To unregister the context menu entry, run DocFetcher with
+"--unregister-contextmenu", e.g.: <span style="font-family: monospace;">C:\Program
+Files\DocFetcher\DocFetcher.exe --unregister-contextmenu</span></li>
+<li>Note that the register and unregister operations are
+language-dependent. That means, if you register the context menu entry,
+and then switch to a different locale (e.g. English -&gt; German), the
+unregister command will have no effect. You'll have to switch back to
+previous locale to remove the context menu entry.
+(Alternatively, you could just remove the "Search With DocFetcher"
+entry in the Windows registry: HKEY_CLASSES_ROOT -&gt; Directory -&gt;
+shell -&gt; ...)<br>
+</li>
+</ul>
+<h2>Installation on Linux</h2>
+<p>If you launch DocFetcher with a space-separated list of
+directories as start parameters, right after startup DocFetcher will
+put these directories in the indexing queue, and mark
+them&nbsp;with the "delete on exit" flag. DocFetcher may reject
+some of the parameters if they don't make sense (e.g. non-existent
+directories). If a path contains whitespace characters, it must be put
+in quotes.</p>
+<p>So, in order to integrate DocFetcher with your file manager,
+you'll have to figure out how to create a context menu entry in your
+file manager that launches DocFetcher with the selected folders as
+start parameters.</p>
+<p>Here's how you can do it in Nautilus:</p>
+<ul>
+<li>Install the package 'nautilus-actions' (e.g. <span style="font-family: monospace;">sudo apt-get install
+nautilus-actions</span>).</li>
+<li>Go to 'Preferences &gt; Nautilus Actions
+Configuration', click on 'Import/Export'.</li>
+<li>Import the schema file that was shipped with DocFetcher.
+Location of the schema file:</li>
+<ul>
+<li>Linux Debian package: /usr/share/docfetcher</li>
+<li>Linux Portable: In the DocFetcher folder</li>
+</ul>
+<li>If you're using the portable version, you'll have to modify
+the imported configuration a bit: Select the configuration, click on
+'Edit' and&nbsp;adjust the path to the executable (DocFetcher.sh)
+and the icon file (icons/docfetcher16.png). You'll have to do this
+every time you move the DocFetcher folder.</li>
+<li>To remove the context menu entry, simply delete it in the
+'Nautilus Action Configuration'.<br>
+</li>
+</ul>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Back
+to main page</a></div>
+</body></html>

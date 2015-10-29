@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Handbuch - Indexverwaltung</title>
+
+<meta content="Hermann-Josef Beckers" name="author">
+<link rel="stylesheet" href="style.css" type="text/css"></head>
+<body>
+<div class="header"><a href="../DocFetcher_Manual.html#Additional_Information">Zur&uuml;ck zur Hauptseite
+</a></div>
+<div id="main">
+<h1>Indexverwaltung</h1>
+<div style="max-width: 200px; float: left;"><img style="width: 200px; height: 215px;" alt="" src="Index_Management.png"><br>
+</div>
+<div style="margin-left: 200px; font-size: small; min-height: 215px;">
+<ol>
+<li><span class="p-label">Tab-Leiste</span>:
+Zeigt eine Warteschlange der zu indizierenden Ordner.</li>
+<li><span class="p-label">Hinzuf&uuml;gen/Entfernen</span>:
+Sie k&ouml;nnen die Schaltfl&auml;che "Ordner zur Warteschlange hinzuf&uuml;gen" verwenden, um Eintr&auml;ge zur Warteschlange hinzuzuf&uuml;gen und&nbsp;die Schlie&szlig;en-Felder auf den Tabs zum Entfernen von Warteschlangen-Eintr&auml;gen nutzen. Jeder Eintrag kann gesondert mit den Einstellungen unterhalb der Tab-Leiste konfiguriert werden.</li>
+<li><span class="p-label">Dieses Fenster schlie&szlig;en</span>:
+Klicken auf diese Schaltfl&auml;che schlie&szlig;t dieses Fenster und bricht einen evtl. laufenden Indizierungsproze&szlig; ab.</li>
+<li><span class="p-label">Zielordner</span>:
+Der Pfad zu dem Ordner, auf den sich der derzeit angezeigte Warteschlangeneintrag bezieht.</li>
+<li><span class="p-label">Text-Datei-Erweiterungen</span>:
+Die Dateierweiterungen von Dateien, die als einfacher Text indiziert werden sollen, durch Leerzeichen getrennt. Typische Werte sind: c, cpp, log, java, py. Im Fall eines Konfliktes mit bestehenden Datei-Erweiterungen haben die vom Anwender definierten Dateierweiterungen eine h&ouml;here Priorit&auml;t. Um eine Liste mit den verf&uuml;gbaren Dateierweiterungen unterhalb des derzeitigen Zielordners zu erhalten, klicken Sie auf die Schaltfl&auml;che "...".</li>
+<li><span class="p-label">HTML-Datei-Erweiterungen</span>:
+Die Dateierweiterungen von Dateien, die als HTML-Dokumente indiziert werden sollen, durch Leerzeichen getrennt. Diese Einstellung hat eine h&ouml;here Priorit&auml;t als die Anwender-definierten Text-Dateierweiterungen.&nbsp;Um eine Liste mit den verf&uuml;gbaren Dateierweiterungen unterhalb des derzeitigen Zielordners zu erhalten, klicken Sie auf die Schaltfl&auml;che "...".
+</li>
+<li><span class="p-label">&Uuml;berspringen (Regex)</span>:
+Eine Reihe regul&auml;rer Ausdr&uuml;cke. Jede Datei mit einem Namen, der einem dieser Muster entspricht, wird von der Indizierung ausgenommen. Zum Testen, ob Ihr eingegebenes Muster auf eine spezielle Datei zutrifft, verwenden Sie das in (12) beschriebene Programm. F&uuml;r weitere Informationen zu regul&auml;ren Ausdr&uuml;cken siehe <a href="Skip_Files_Regex.html">hier</a>.</li>
+<li><span class="p-label">HTML-Dateien und ihre zugeh&ouml;rigen Ordner zusammenfassen</span>:
+Ob HTML-Dateien und ihre zugeh&ouml;rigen Ordner zusammengefasst werden sollen, z. B. wie "foo.html" und ein Ordner im gleichen Verzeichnis mit dem Namen  "foo_files". Zu weiteren Informationen siehe <a href="HTML_Pair_Detection.html">hier</a>.</li>
+<li><span class="p-label">Index nach Verlassen des Programms l&ouml;schen</span>:
+L&ouml;scht die Indexdateien f&uuml;r diesen Ordner nach dem Programmende.
+Dies erm&ouml;glicht Ihnen die Erstellung von "Tempor&auml;r-Indizes". Dieses Konzept steht in Beziehung <a href="Shell_Integration.html">hierzu</a>.</li>
+<li><span class="p-label">Hilfe</span>:
+&Ouml;ffnet dieses Dokument in einem Webbrowser.</li>
+<li><span class="p-label">Standardwerte</span>:
+Setzt die Eintr&auml;ge auf die Standardwerte f&uuml;r die Indizierung zur&uuml;ck.</li>
+<li><span class="p-label">Start</span>:
+Mit dieser Schaltfl&auml;che teilen Sie DocFetcher mit, dass Sie mit der Konfiguration dieses Warteschlangeneintrags fertig sind und er f&uuml;r die Verarbeitung bereit ist. Beachten Sie, dass diese Schaltfl&auml;che nur die 'Start'-Markierung f&uuml;r diesen Eintrag setzt, nicht f&uuml;r die anderen Eintr&auml;ge in der Warteschlange.</li>
+<li><span class="p-label">Test des regul&auml;ren Ausdrucks</span>:
+Dieses kleine Programm sagt Ihnen, ob das im Feld "&Uuml;berspringen (Regex)" eingegebene Muster der hier angegebenen Datei entspricht.
+</li>
+</ol>
+</div>
+</div>
+<div class="footer"><a href="../DocFetcher_Manual.html#Additional_Information">Zur&uuml;ck zur Hauptseite</a></div>
+</body></html>

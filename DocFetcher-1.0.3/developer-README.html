@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DocFetcher Developer Readme</title>
+
+<meta content="Tran Nam Quang" name="author">
+<meta name="GENERATOR" content="OpenOffice.org 2.2 (Linux)">
+<meta name="AUTHOR" content="Tran Quang">
+<meta name="CREATED" content="20071010;12210300">
+<meta name="CHANGEDBY" content="Tran Quang">
+<meta name="CHANGED" content="20071010;21544900">
+<link rel="stylesheet" href="DocFetcher_Manual_files/style.css" type="text/css"></head><body style="max-width: 640px; margin-left: auto; margin-right: auto; font-family: Helvetica; font-style: normal; font-variant: normal; font-weight: normal; font-size: 95%; line-height: normal; font-size-adjust: none; font-stretch: normal;">
+<div id="main" style="margin-bottom: 30px;">
+<h1><span style="font-family: monospace;"></span>
+Building DocFetcher<br></h1><ul><li>Note:
+The build process for DocFetcher that is described here involves
+precompiled daemon executables, which can be found in resources/daemon.
+If you don't mind the inevitable C/C++ build headaches and want to
+recompile the daemons as well, follow the instructions in the 'The
+daemons' section below.</li><li>There are two ways to build all DocFetcher releases <span style="font-style: italic;">except</span> for the Windows installer: First, if you want to build them inside
+Eclipse, you&nbsp;have to import DocFetcher as a new
+project into your Eclipse workspace by following the steps described in
+the&nbsp;section&nbsp;"Setting up DocFetcher in Eclipse" (see below). The second option is to
+install Ant without Eclipse and run the Ant build script from the command
+line. See the documentation on the <a href="http://ant.apache.org/">Ant website</a> for more info.</li><li>
+The Ant
+build script requires an additional Ant task that isn't shipped with
+the DocFetcher source, the AspectJ Tools. Download it from <a href="http://www.eclipse.org/aspectj/downloads.php">here</a>
+and put the "aspectjtools.jar" file in it on the root directory of
+the newly created DocFetcher project. Now you should be able to run the
+Ant build script.</li><li>To build the Windows installer, boot into Windows, then:</li>
+  <ul>
+    <li>Install <a href="http://nsis.sourceforge.net/">NSIS</a>.</li>
+    <li>Install the NSIS plugin "Processes" by copying the Processes.dll file from <span style="font-family: monospace;">[DocFetcher folder]\dev</span> to the <span style="font-family: monospace;">C:\Program Files\NSIS\Plugins</span> folder.<br>
+    </li>
+    <li>Execute build-win-installer.nsi. Important: The NSIS script must be run
+<span style="font-style: italic;">after</span> running the Ant script, because the source code cannot be
+compiled with NSIS alone.</li>
+  </ul>
+<li>The output of both build scripts will go to the build folder (which will be created if it doesn't exist).</li><li>To
+increment the version number of DocFetcher, update the line "!define
+VERSION ???" at the beginning of the NSIS script and the line
+"&lt;property name="version" value="???"/&gt;" at the beginning of the
+Ant script. The scripts will then take care of the rest.</li></ul><h1>Setting up DocFetcher in Eclipse<br>
+</h1><ul>
+<li>Download the <a href="http://sourceforge.net/projects/docfetcher">source code</a>
+for DocFetcher if you haven't already.</li>
+<li>Download <a href="http://www.eclipse.org/downloads/">Eclipse
+3.4</a> or newer for your platform. Make sure you download the
+"Eclipse Classic" edition.</li>
+<li>Download the version of <a href="http://www.eclipse.org/ajdt/">AJDT</a> (AspectJ
+Development Tools) that matches your version of Eclipse. For Eclipse
+3.4 this would be AJDT 1.6.x.</li>
+<li>Install AJDT by extracting the package contents into the
+Eclipse folder. See <a href="http://www.eclipse.org/ajdt/gettingstarted.php">here</a>
+for more information. Then run Eclipse with the command "eclipse
+-clean" to install the AJDT plugin.</li>
+<li>In the Eclipse menu, choose <span style="font-family: monospace;">File &gt; Import
+&gt;
+Existing Projects into Workspace</span>
+and select the DocFetcher
+source code package. Now a new project will be created. (Simply
+unzipping the contents of the source code package into your Eclipse
+workspace folder does NOT work.)</li></ul><h1>Running DocFetcher inside Eclipse</h1><ul>
+<li>First, import DocFetcher as a new project into your Eclipse workspace
+by following the steps described in the&nbsp;section&nbsp;"Setting up DocFetcher
+in Eclipse".</li><li>Somewhere
+in the Eclipse preferences you can set the JDK compliance level to
+1.5.0. With a 1.6.0 compliance level Eclipse may refuse to compile the
+program.</li>
+<li>Set up the referenced libraries. Make sure the correct SWT
+library is on the classpath. There's two of them, <span style="font-family: monospace;">swt-xxx-win32.jar</span> and <span style="font-family: monospace;">swt-xxx-linux-gtk.jar</span>.
+If you're running on Windows, the first one should be on the classpath,
+for Linux, it's the second one. It won't work if you have both of them
+on the classpath.</li><ul><li>To remove a library from the classpath,
+right-click on the appropriate jar file under the entry "Referenced
+Libraries" in Eclipse's "Package" panel and select <span style="font-family: monospace;">Build Path &gt; Remove from Build Path</span>.</li><li>To add a library to the classpath, right-click on the jar file in the lib folder (also on the "Package" panel) and select <span style="font-family: monospace;">Build Path &gt; Add to Build Path</span>.</li></ul>
+<li>Create a new run configuration: <span style="font-family: monospace;">Run &gt; Run
+Configurations...</span>.</li><ul><li>The working directory of this configuration has to be set to
+<span style="font-family: monospace;">DocFetcher/bin</span> (instead of <span style="font-family: monospace;">DocFetcher</span>), because the application will
+look for the icons folder, which is located inside <span style="font-family: monospace;">DocFetcher/bin</span>. Now
+try to run DocFetcher with this run configuration.</li><li>Also, the&nbsp;<span style="font-family: monospace;">DocFetcher/resources/lang</span> folder must be on your classpath. Go
+to the "Classpath" tab, click on "User Entries", then on the button
+"Advanced..." to the right and add the lang folder to your classpath.
+Without this folder, DocFetcher would complain that it cannot find some
+"Resources" files.</li></ul><li>If you see an error message resembling this one: "<span style="font-family: monospace;">Exception in thread "main" java.lang.UnsatisfiedLinkError: no
+swt-gtk-3448 or swt-gtk in swt.library.path, java.library.path or the
+jar file</span>" that means you haven't put the correct SWT library on your classpath.</li></ul><h1>The daemons</h1><h2>Setting up the daemons in Eclipse</h2><ul><li>First, you'll have install the&nbsp;<a href="http://www.eclipse.org/cdt">C/C++ Development Toolkit (CDT)</a>,
+a plugin for Eclipse to compile C/C++ projects. Then set up the build
+toolchain by following the instructions on the first page(s) of this
+section of Eclipse's Help System: <span style="font-family: monospace;">Help &gt; Help Contents &gt; C/C++ Development&nbsp;User Guide</span>.</li><li>The
+source code for the two daemons (Linux, Windows) ships with the
+DocFetcher source code package. However, you'll have to import them as
+separate Eclipse projects.</li><ul><li>From the Eclipse menu select: <span style="font-family: monospace;">File &gt; Import&nbsp;&gt; Existing Projects into Workspace</span></li><li>In
+"Select root directory" enter the folder where the daemon source code
+can be found. For Windows, this is the folder "src-daemon/win32", for
+Linux, it's "src-daemon/linux".</li><li>Check the option "Copy projects into workspace".</li></ul><li>Select the daemon project in the package view, then, from the Eclipse menu, select <span style="font-family: monospace;">Project &gt; Build Project</span>.</li></ul><h2>Compiling the daemons with Ant</h2><ul><li>There's a file named 'build-daemon.xml' on the project root. Note that this script uses a modified version of the <a href="https://sourceforge.net/projects/ant-contrib/">cpptasks 1.0 beta 5</a> ant task. The modification is based on the patch posted on <a href="https://sourceforge.net/tracker/?func=detail&amp;aid=1576291&amp;group_id=36177&amp;atid=416920">this bug tracker item</a>.</li><li>Make
+sure you have a C++ compiler installed. (If you've successfully set up
+the CDT plugin, then you already got a C++ compiler.)</li><li>Install <a href="http://ant.apache.org/">Apache Ant</a>
+for your OS, then run this script with the following command from the
+terminal: "ant -f build-daemon.xml". If you're on Windows, you'll have
+to put the parent folder of the ant executable on your 'PATH' (a
+so-called environment variable).</li><li>Depending
+on whether this script is run on Windows or Linux, it will generate
+either a Windows or a Linux daemon in the build folder.</li></ul><h1>What's inside&nbsp;all the folders</h1><ul><li>project root: This file, the build scripts and files related to the build scripts (i.e. Ant tasks).</li><li>src: The source code for DocFetcher.</li><li>src-daemon: The source code for the daemons.</li><li>resources: Everything that will be shipped with the release builds.</li><ul><li>deb: Files related to the debian package.</li><li>daemon: Precompiled daemon executables</li><li>help: The manual.</li><li>icons: The image files used by the program.</li><li>lang: Translations of the GUI.</li><li>licenses: License information for all libraries used.</li><li>portable: Files related to the portable version.</li><li>windows: Files related to the Windows version.</li></ul><li>build:
+This is where the output of the build scripts goes to. Warning: Don't
+put anything of value into this folder, it will be deleted when running
+the Ant build script.</li><li>dev:
+Development related resources, such as Python scripts and&nbsp;vector
+graphics.&nbsp;The Python scripts should be run from a command prompt
+and are used for analyzing and safely manipulating certain parts
+of&nbsp;the source code. Each of them contains some descriptive lines
+at the beginning.</li><li>lib: All libraries used by DocFetcher, including native libraries (*.so and *.dll).</li><li>website: The files the <a href="http://docfetcher.sourceforge.net/">project website</a> consists of.</li></ul></div>
+<div class="footer" style="border-top: 3px solid gray; color: rgb(128, 128, 128); text-align: center; padding-top: 10px;">DocFetcher
+Developer Readme - Copyright (c) 2007-2008 Tran Nam Quang
+</div>
+</body></html>
